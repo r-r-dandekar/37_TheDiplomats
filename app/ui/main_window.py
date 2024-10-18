@@ -1,12 +1,17 @@
 import sys
 import os
-from PyQt6.QtWidgets import QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QFileDialog, QTreeView, QApplication
+import subprocess
+from PyQt6.QtCore import QProcess, Qt, QDir
+from PyQt6.QtGui import QTextOption
+from PyQt6.QtWidgets import (
+    QMainWindow, QWidget, QHBoxLayout, QFileDialog,
+    QTreeView, QApplication, QVBoxLayout,
+    QTextEdit, QSizePolicy
+)
 from PyQt6.QtGui import QFileSystemModel
-from PyQt6.QtCore import Qt, QDir
 from ..utils.config import AppConfig
 from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
-from .widgets.statusbar import StatusBar
 
 
 class MainWindow(QMainWindow):
@@ -24,7 +29,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Window-Settings
         self.setWindowTitle(AppConfig.APP_NAME)
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 00, 800, 600)
 
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
@@ -33,31 +38,77 @@ class MainWindow(QMainWindow):
         layout = QHBoxLayout(central_widget)
         central_widget.setLayout(layout)
 
-        # Create Widgets
-        self.treeview_container = self.create_treeview_container()  # Create a container for tree view and nav bar
-        self.vbox_container = self.create_vbox_container()  # Create a vertical box layout container
+        # Create a vertical layout for the left panel
+        self.left_layout = QVBoxLayout()  # New vertical layout for the left column
+
+        # Create treeview container
+        self.treeview_container = self.create_treeview_container()
+
+        # Add the tree view container to the left layout
+        self.left_layout.addWidget(self.treeview_container)  # Add tree view container
+
+        # Create a container for the right panel (70% blank space above the terminal)
+        self.right_container = QWidget(self)
+        self.right_layout = QVBoxLayout(self.right_container)  # Vertical layout for the right side
+
+        # Add a blank space (QTextEdit for demonstration, could be any widget)
+        self.blank_space = QTextEdit(self)
+        self.blank_space.setReadOnly(True)
+        self.blank_space.setPlaceholderText("Blank Space Above Terminal")
+        self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
+
+        self.right_layout.addWidget(self.blank_space, stretch=4)  # Adjusted stretch for blank space
+        self.terminal = self.create_terminal()  # Create the terminal
+        self.right_layout.addWidget(self.terminal, stretch=6)  # Adjusted stretch for terminal
+
+        # Add the left layout and right container to the main layout
+        layout.addLayout(self.left_layout)  # Add the left layout to the main layout
+        layout.addWidget(self.right_container)  # Add right container to the main layout
+
+        # Set margins and spacing to zero to eliminate gaps
+        layout.setContentsMargins(0, 0, 0, 0)  # Remove margins around the main layout
+        layout.setSpacing(0)  # Remove spacing between left and right columns
 
         # Create and add the menu bar
         self.setMenuBar(MenuBar(self))  # Pass the main window to MenuBar
 
-        # Add Widgets to Layout
-        layout.addWidget(self.treeview_container)
-        layout.addLayout(self.vbox_container, stretch=1)
+        # Initialize and start the command prompt
+        self.process = QProcess()
+        self.process.start("cmd.exe")
+        self.process.readyReadStandardOutput.connect(self.handle_output)
+        self.process.readyReadStandardError.connect(self.handle_error)
+
+        # Run a command in the terminal at startup
+        self.run_command_in_terminal("echo Welcome to the integrated terminal!\n")
+
+    def closeEvent(self, event) -> None:
+        """
+        Overrides the close event to terminate the QProcess if it's running.
+        """
+        if self.process.state() == QProcess.ProcessState.Running:
+            self.process.terminate()  # Safely terminate the process
+            self.process.waitForFinished()  # Wait for the process to finish
+
+        event.accept()  # Accept the event to close the window
 
     def create_treeview_container(self) -> QWidget:
         """
         Creates a container widget for the tree view and navigation bar.
         """
         container = QWidget(self)
+        container.setMaximumWidth(250)
         v_layout = QVBoxLayout(container)  # Vertical layout for tree view and navbar
 
         # Create and add the navigation bar
         self.navbar = ToolBar(self, orientation=Qt.Orientation.Horizontal,
-                          style=Qt.ToolButtonStyle.ToolButtonTextUnderIcon, icon_size=(18, 18))
+                              style=Qt.ToolButtonStyle.ToolButtonTextUnderIcon, icon_size=(18, 18))
         self.navbar.add_button("Open Folder", "resources/assets/icons/windows/imageres-10.ico", self.open_folder)
-    
+
         # Set the border for the toolbar
         self.navbar.setStyleSheet("QToolBar { border: 1px solid #cfcaca; padding: 5px; }")  # Adjust thickness and padding
+        
+        # Set the width of the toolbar to match the tree view
+        self.navbar.setFixedWidth(250)  # Match the tree view width
 
         v_layout.addWidget(self.navbar)  # Add the navigation bar to the vertical layout
 
@@ -68,36 +119,66 @@ class MainWindow(QMainWindow):
         container.setLayout(v_layout)
         return container
 
-    def create_vbox_container(self) -> QVBoxLayout:
+    def create_terminal(self) -> QTextEdit:
         """
-        Creates a vertical box layout to be added to the main window.
+        Creates a terminal widget using QTextEdit for displaying command outputs.
         """
-        vbox = QVBoxLayout()
+        terminal = QTextEdit(self)
+        terminal.setStyleSheet("background-color: black; color: white; font-family: Courier;")
+        terminal.setReadOnly(False)  # Allows input for commands
+        terminal.setWordWrapMode(QTextOption.WrapMode.NoWrap)
+        terminal.setLineWrapMode(QTextEdit.LineWrapMode.NoWrap)
 
-        # Add your widgets to the vbox layout here if needed.
-        # Example placeholder widgets could be added here:
-        # label = QLabel("Placeholder Widget", self)
-        # vbox.addWidget(label)
+        # Capture user input from the terminal
+        terminal.keyPressEvent = self.custom_keypress_event(terminal.keyPressEvent)
 
-        return vbox
+        return terminal
 
-    def create_toolbars(self) -> None:
+    def custom_keypress_event(self, original_keypress_event):
         """
-        Creates and adds the toolbars to the main window.
+        Captures key press events to allow the terminal to execute commands.
         """
-        # Right Toolbar
-        self.rightbar = ToolBar(self, orientation=Qt.Orientation.Vertical,
-                                style=Qt.ToolButtonStyle.ToolButtonIconOnly,
-                                icon_size=(24, 24))
+        def new_keypress_event(event):
+            if event.key() == Qt.Key.Key_Return or event.key() == Qt.Key.Key_Enter:
+                command = self.terminal.toPlainText().splitlines()[-1]
+                self.send_command_to_process(command)  # Send command to the process
+            original_keypress_event(event)
+        return new_keypress_event
 
-        # Right Toolbar Buttons
-        self.rightbar.add_separator()
-        self.rightbar.add_button(
-            "Privacy", "resources/assets/icons/windows/shell32-167.ico", self.privacy_window)
-        self.rightbar.add_button(
-            "Settings", "resources/assets/icons/windows/shell32-315.ico", self.settings_window)
+    def send_command_to_process(self, command: str) -> None:
+        """
+        Sends the command to the command prompt process.
+        """
+        command += "\n"  # Append newline to simulate Enter key
+        self.process.write(command.encode())  # Write command to process
 
-        self.addToolBar(Qt.ToolBarArea.RightToolBarArea, self.rightbar)
+    def handle_output(self):
+        """
+        Handles output from the command prompt and appends it to the terminal widget.
+        """
+        data = self.process.readAllStandardOutput()
+        self.terminal.append(data.data().decode())
+
+    def handle_error(self):
+        """
+        Handles error output from the command prompt.
+        """
+        data = self.process.readAllStandardError()
+        self.terminal.append(data.data().decode())
+
+    def run_command_in_terminal(self, command: str) -> None:
+        """
+        Executes a system command and displays the output in the terminal widget.
+        """
+        try:
+            # Execute the command and get the output
+            result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+            # Display the output in the terminal
+            self.terminal.append(result.stdout)
+            self.terminal.append(result.stderr)
+        except Exception as e:
+            self.terminal.append(f"Error running command: {str(e)}")
 
     def create_treeview(self) -> QTreeView:
         """
@@ -110,8 +191,8 @@ class MainWindow(QMainWindow):
         treeview.setModel(self.model)
         treeview.setRootIndex(self.model.index(QDir.rootPath()))  # Display the file system
 
-        treeview.setFixedWidth(250)        # Set fixed width to 250 pixels
-        treeview.setMinimumHeight(600)  
+        treeview.setFixedWidth(250)  # Set fixed width to 250 pixels
+        treeview.setMinimumHeight(600)  # Ensure minimum height
         treeview.setColumnWidth(0, 250)
         return treeview
 
@@ -129,30 +210,6 @@ class MainWindow(QMainWindow):
             self.treeview.setRootIndex(self.model.index(folder_path))
         else:
             print("No folder selected.")
-
-    def save_file(self) -> None:
-        """
-        Event handler for the "Save" button. Displays the "Save File" dialog.
-        """
-        print("Save")
-
-    def exit_app(self) -> None:
-        """
-        Event handler for the "Exit" button. Closes the application.
-        """
-        self.close()
-
-    def settings_window(self) -> None:
-        """
-        Event handler for the "Settings" button. Displays the "Settings" window.
-        """
-        print("settings_window")
-
-    def privacy_window(self) -> None:
-        """
-        Event handler for the "Privacy" button. Displays the "Privacy" window.
-        """
-        print("privacy_window")
 
 
 # Standard PyQt app initialization
