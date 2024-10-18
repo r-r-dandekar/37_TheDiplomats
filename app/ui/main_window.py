@@ -6,7 +6,7 @@ from PyQt6.QtGui import QTextOption
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QFileDialog,
     QTreeView, QApplication, QVBoxLayout,
-    QTextEdit, QSizePolicy
+    QTextEdit, QSizePolicy, QLabel
 )
 from PyQt6.QtGui import QFileSystemModel
 from ..utils.config import AppConfig
@@ -29,7 +29,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Window-Settings
         self.setWindowTitle(AppConfig.APP_NAME)
-        self.setGeometry(100, 00, 800, 600)
+        self.setGeometry(100, 0, 800, 600)
 
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
@@ -51,12 +51,18 @@ class MainWindow(QMainWindow):
         self.right_container = QWidget(self)
         self.right_layout = QVBoxLayout(self.right_container)  # Vertical layout for the right side
 
+        # Create the "Errors" navbar
+        self.errors_navbar = QLabel("Errors", self)
+        self.errors_navbar.setStyleSheet("background-color: darkred; color: white; font-weight: bold; font-size: 16px; padding: 5px;")  # Adjust font-size here
+        self.errors_navbar.setFixedHeight(50)  # Set fixed height for the navbar to match the toolbar height
+        self.right_layout.addWidget(self.errors_navbar)  # Add the errors navbar to the layout
+
         # Add a blank space (QTextEdit for demonstration, could be any widget)
         self.blank_space = QTextEdit(self)
         self.blank_space.setReadOnly(True)
         self.blank_space.setPlaceholderText("Blank Space Above Terminal")
         self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
-        self.blank_space.setFixedHeight(600)
+        self.blank_space.setFixedHeight(400)
         self.right_layout.addWidget(self.blank_space, stretch=4)  # Adjusted stretch for blank space
         self.terminal = self.create_terminal()  # Create the terminal
         self.right_layout.addWidget(self.terminal, stretch=6)  # Adjusted stretch for terminal
