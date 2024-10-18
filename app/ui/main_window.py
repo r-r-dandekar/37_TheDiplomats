@@ -1,11 +1,12 @@
-''' app/ui/main_window.py '''
-from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QMainWindow, QWidget, QHBoxLayout, QTextEdit
+import sys
+import os
+from PyQt6.QtWidgets import QMainWindow, QWidget, QHBoxLayout, QTextEdit, QFileDialog, QTreeView
+from PyQt6.QtGui import QFileSystemModel
+from PyQt6.QtCore import Qt, QDir
 from ..utils.config import AppConfig
 from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
 from .widgets.statusbar import StatusBar
-from .widgets.treeview import TreeView
 
 
 class MainWindow(QMainWindow):
@@ -54,7 +55,7 @@ class MainWindow(QMainWindow):
 
         # Top Toolbar Buttons
         self.topbar.add_button(
-            "Open", "resources/assets/icons/windows/imageres-10.ico", self.open_file)
+            "Open", "resources/assets/icons/windows/imageres-10.ico", self.open_folder)
         self.topbar.add_button(
             "Save", "resources/assets/icons/windows/shell32-259.ico", self.save_file)
         self.topbar.add_separator()
@@ -76,11 +77,19 @@ class MainWindow(QMainWindow):
         self.addToolBar(Qt.ToolBarArea.TopToolBarArea, self.topbar)
         self.addToolBar(Qt.ToolBarArea.RightToolBarArea, self.rightbar)
 
-    def create_treeview(self) -> TreeView:
+    def create_treeview(self) -> QTreeView:
         """
         Creates and adds the tree view widget to the main window.
         """
-        return TreeView(self)
+        self.model = QFileSystemModel()
+        self.model.setRootPath(QDir.rootPath())  # Set root path to the root of the file system
+
+        treeview = QTreeView(self)
+        treeview.setModel(self.model)
+        treeview.setRootIndex(self.model.index(QDir.rootPath()))  # Display the file system
+
+        treeview.setColumnWidth(0, 250)
+        return treeview
 
     def create_edit(self) -> QTextEdit:
         """
@@ -88,11 +97,20 @@ class MainWindow(QMainWindow):
         """
         return QTextEdit(self)
 
-    def open_file(self) -> None:
+    def open_folder(self) -> None:
         """
-        Event handler for the "Open" button. Displays the "Open File" dialog.
+        Event handler for the "Open" button. Opens a folder selection dialog and updates the tree view.
         """
-        print("Open")
+        # Open the folder selection dialog
+        folder_path = QFileDialog.getExistingDirectory(self, "Select Folder")
+
+        # Check if a folder is selected
+        if folder_path:
+            print(f"Selected Folder: {folder_path}")
+            # Update the tree view to display the contents of the selected folder
+            self.treeview.setRootIndex(self.model.index(folder_path))
+        else:
+            print("No folder selected.")
 
     def save_file(self) -> None:
         """
@@ -110,9 +128,18 @@ class MainWindow(QMainWindow):
         """
         Event handler for the "Settings" button. Displays the "Settings" window.
         """
+        print("settings_window")
 
     def privacy_window(self) -> None:
         """
         Event handler for the "Privacy" button. Displays the "Privacy" window.
         """
         print("privacy_window")
+
+
+# Standard PyQt app initialization
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())
