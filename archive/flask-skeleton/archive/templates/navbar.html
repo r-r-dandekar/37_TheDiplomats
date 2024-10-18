@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="static/images/logo_400_100.png" style="height:50px;" alt="Inksight"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+          <a class="nav-link {% if page_name=='home' %} active {% endif %}" href="/">Home</a>
+        </li>
+        {% if session['logged_in'] %}
+        <li class="nav-item mx-2">
+          <a class="nav-link {% if page_name=='convert' %} active {% endif %}" href="/convert">Convert</a>
+        </li>
+        {% endif %}
+        <li class="nav-item mx-2">
+          <a class="nav-link {% if page_name=='about' %} active {% endif %}" href="/about">About</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link {% if page_name=='contact' %} active {% endif %}" href="/contact">Contact Us</a>
+        </li>
+        {% if session['logged_in'] %}
+        <li class="nav-item mx-2">
+          <a class="nav-link {% if page_name=='profile' %} active {% endif %}" href="/profile">Profile</a>
+        </li>
+        {% endif %}
+      </ul>
+      {% if not session['logged_in'] %}
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item mx-2 mb-1">
+          <a class="btn btn-outline-primary" href="/login">Login</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="btn btn-primary" href="/signup">Sign Up</a>
+        </li>
+      </ul>
+      {% else %}
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item mx-2 mb-1">
+          <a class="btn btn-outline-primary" href="/logout">Logout</a>
+        </li>
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</nav>

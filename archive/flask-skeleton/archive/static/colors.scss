@@ -1,0 +1,35 @@
+@import "base_colors";
+
+$bright-orange: #ff00c3;
+$very-dark-gray: #18191a !default;
+
+
+$primary: $bright-orange !default;
+
+$body-color:                $gray-100 !default;
+$body-bg:                   $black !default;
+$body-secondary-bg:         $gray-700 !default;
+$body-tertiary-bg:          $very-dark-gray !default;
+
+
+
+$dark-text-emphasis: $bright-orange !default;
+
+$navbar-dark-color:                 rgba($bright-orange, .65) !default;
+$navbar-dark-hover-color:           rgba($bright-orange, .95) !default;
+$navbar-dark-active-color:          $bright-orange !default;
+
+$input-bg:                              $white !default;
+$input-disabled-color:                  null !default;
+$input-disabled-bg:                     $gray-300 !default;
+$input-disabled-border-color:           null !default;
+
+$input-color:                           $gray-800 !default;
+$input-border-color:                    $gray-800 !default;
+$input-placeholder-color:               $gray-600 !default;
+
+
+//$form-file-button-color:          $input-color !default;
+$form-file-button-color:          $white !default;
+$form-file-button-bg:             $body-secondary-bg !default;
+$form-file-button-hover-bg:       rgba($body-secondary-bg, .75) !default;
