@@ -174,3 +174,6 @@ resources/assets/icons/windows/*
 !resources/assets/icons/windows/shell32-220.ico
 !resources/assets/icons/windows/shell32-167.ico
 !resources/assets/icons/windows/shell32-315.ico
+
+# Tensorflow Model (coz they're huge)
+.safetensors
