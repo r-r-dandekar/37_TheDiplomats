@@ -56,7 +56,7 @@ class MainWindow(QMainWindow):
         self.blank_space.setReadOnly(True)
         self.blank_space.setPlaceholderText("Blank Space Above Terminal")
         self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
-
+        self.blank_space.setFixedHeight(600)
         self.right_layout.addWidget(self.blank_space, stretch=4)  # Adjusted stretch for blank space
         self.terminal = self.create_terminal()  # Create the terminal
         self.right_layout.addWidget(self.terminal, stretch=6)  # Adjusted stretch for terminal
