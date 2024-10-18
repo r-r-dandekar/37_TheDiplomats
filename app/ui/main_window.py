@@ -1,6 +1,6 @@
 import sys
 import os
-from PyQt6.QtWidgets import QMainWindow, QWidget, QHBoxLayout, QTextEdit, QFileDialog, QTreeView
+from PyQt6.QtWidgets import QMainWindow, QWidget, QHBoxLayout, QTextEdit, QFileDialog, QTreeView, QApplication, QVBoxLayout
 from PyQt6.QtGui import QFileSystemModel
 from PyQt6.QtCore import Qt, QDir
 from ..utils.config import AppConfig
@@ -25,44 +25,55 @@ class MainWindow(QMainWindow):
         # Window-Settings
         self.setWindowTitle(AppConfig.APP_NAME)
         self.setGeometry(100, 100, 800, 600)
+
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
+        # Main layout
         layout = QHBoxLayout(central_widget)
         central_widget.setLayout(layout)
 
         # Create Widgets
-        self.treeview = self.create_treeview()
+        self.treeview_container = self.create_treeview_container()  # Create a container for tree view and nav bar
         self.editbox = self.create_edit()
 
-        self.create_toolbars()
+        # Create and add the menu bar
+        self.setMenuBar(MenuBar(self))  # Pass the main window to MenuBar
 
-        # Add Widgets to Window
-        self.setMenuBar(MenuBar(self))
-        self.setStatusBar(StatusBar(self))
-
-        layout.addWidget(self.treeview)
+        # Add Widgets to Layout
+        layout.addWidget(self.treeview_container)
         layout.addWidget(self.editbox, stretch=1)
-        layout.addWidget(self.editbox)
+
+    def create_treeview_container(self) -> QWidget:
+        """
+        Creates a container widget for the tree view and navigation bar.
+        """
+        container = QWidget(self)
+        v_layout = QVBoxLayout(container)  # Vertical layout for tree view and navbar
+
+        # Create and add the navigation bar
+        self.navbar = ToolBar(self, orientation=Qt.Orientation.Horizontal,
+                          style=Qt.ToolButtonStyle.ToolButtonTextUnderIcon, icon_size=(18, 18))
+        self.navbar.add_button("Open Folder", "resources/assets/icons/windows/imageres-10.ico", self.open_folder)
+    
+        # Set the border for the toolbar
+        self.navbar.setStyleSheet("QToolBar { border: 1px solid #cfcaca; padding: 5px; }")  # Adjust thickness and padding
+
+        v_layout.addWidget(self.navbar)  # Add the navigation bar to the vertical layout
+
+        # Create and add the tree view
+        self.treeview = self.create_treeview()
+        v_layout.addWidget(self.treeview)  # Add the tree view to the vertical layout
+
+        container.setLayout(v_layout)
+        return container
+
 
     def create_toolbars(self) -> None:
         """
-        Creates and adds the top and right toolbars to the main window.
+        Creates and adds the toolbars to the main window.
         """
-        # Top Toolbar [PyQt6.QtWidgets.QToolBar]
-        self.topbar = ToolBar(self, orientation=Qt.Orientation.Horizontal,
-                              style=Qt.ToolButtonStyle.ToolButtonTextUnderIcon, icon_size=(24, 24))
-
-        # Top Toolbar Buttons
-        self.topbar.add_button(
-            "Open", "resources/assets/icons/windows/imageres-10.ico", self.open_folder)
-        self.topbar.add_button(
-            "Save", "resources/assets/icons/windows/shell32-259.ico", self.save_file)
-        self.topbar.add_separator()
-        self.topbar.add_button(
-            "Exit", "resources/assets/icons/windows/shell32-220.ico", self.exit_app)
-
-        # Right Toolbar [PyQt6.QtWidgets.QToolBar]
+        # Right Toolbar
         self.rightbar = ToolBar(self, orientation=Qt.Orientation.Vertical,
                                 style=Qt.ToolButtonStyle.ToolButtonIconOnly,
                                 icon_size=(24, 24))
@@ -74,7 +85,6 @@ class MainWindow(QMainWindow):
         self.rightbar.add_button(
             "Settings", "resources/assets/icons/windows/shell32-315.ico", self.settings_window)
 
-        self.addToolBar(Qt.ToolBarArea.TopToolBarArea, self.topbar)
         self.addToolBar(Qt.ToolBarArea.RightToolBarArea, self.rightbar)
 
     def create_treeview(self) -> QTreeView:
@@ -88,6 +98,8 @@ class MainWindow(QMainWindow):
         treeview.setModel(self.model)
         treeview.setRootIndex(self.model.index(QDir.rootPath()))  # Display the file system
 
+        treeview.setFixedWidth(250)        # Set fixed width to 250 pixels
+        treeview.setMinimumHeight(600)  
         treeview.setColumnWidth(0, 250)
         return treeview
 
@@ -99,7 +111,7 @@ class MainWindow(QMainWindow):
 
     def open_folder(self) -> None:
         """
-        Event handler for the "Open" button. Opens a folder selection dialog and updates the tree view.
+        Event handler for the "Open Folder" button. Opens a folder selection dialog and updates the tree view.
         """
         # Open the folder selection dialog
         folder_path = QFileDialog.getExistingDirectory(self, "Select Folder")
