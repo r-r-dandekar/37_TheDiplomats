@@ -1,6 +1,6 @@
 import sys
 import os
-from PyQt6.QtWidgets import QMainWindow, QWidget, QHBoxLayout, QTextEdit, QFileDialog, QTreeView, QApplication, QVBoxLayout
+from PyQt6.QtWidgets import QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QFileDialog, QTreeView, QApplication
 from PyQt6.QtGui import QFileSystemModel
 from PyQt6.QtCore import Qt, QDir
 from ..utils.config import AppConfig
@@ -35,14 +35,14 @@ class MainWindow(QMainWindow):
 
         # Create Widgets
         self.treeview_container = self.create_treeview_container()  # Create a container for tree view and nav bar
-        self.editbox = self.create_edit()
+        self.vbox_container = self.create_vbox_container()  # Create a vertical box layout container
 
         # Create and add the menu bar
         self.setMenuBar(MenuBar(self))  # Pass the main window to MenuBar
 
         # Add Widgets to Layout
         layout.addWidget(self.treeview_container)
-        layout.addWidget(self.editbox, stretch=1)
+        layout.addLayout(self.vbox_container, stretch=1)
 
     def create_treeview_container(self) -> QWidget:
         """
@@ -68,6 +68,18 @@ class MainWindow(QMainWindow):
         container.setLayout(v_layout)
         return container
 
+    def create_vbox_container(self) -> QVBoxLayout:
+        """
+        Creates a vertical box layout to be added to the main window.
+        """
+        vbox = QVBoxLayout()
+
+        # Add your widgets to the vbox layout here if needed.
+        # Example placeholder widgets could be added here:
+        # label = QLabel("Placeholder Widget", self)
+        # vbox.addWidget(label)
+
+        return vbox
 
     def create_toolbars(self) -> None:
         """
@@ -102,12 +114,6 @@ class MainWindow(QMainWindow):
         treeview.setMinimumHeight(600)  
         treeview.setColumnWidth(0, 250)
         return treeview
-
-    def create_edit(self) -> QTextEdit:
-        """
-        Creates and adds the QTextEdit widget to the main window.
-        """
-        return QTextEdit(self)
 
     def open_folder(self) -> None:
         """
