@@ -25,7 +25,7 @@ class ChatbotTab(QWidget):
 
         # Using QTextEdit for multi-line input
         self.prompt_box = QTextEdit()
-        self.prompt_box.setFixedHeight(50)  # Set fixed height
+        self.prompt_box.setFixedHeight(50)  # Set fixed height for initial appearance
         self.prompt_box.setFixedWidth(900)   # Set fixed width
         self.prompt_box.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
 
@@ -67,27 +67,42 @@ class ChatbotTab(QWidget):
     def submit_prompt(self):
         prompt = self.prompt_box.toPlainText()  # Get text from QTextEdit
         self.prompt_box.clear()
-        
+
         # Set larger font size for the prompt label
         prompt_label = QLabel(prompt)
         prompt_label.setWordWrap(True)  # Enable word wrap
         prompt_label.setStyleSheet("QLabel {color: white; border-radius: 15px; background-color: #555555; padding: 10px;}")  # Rounded corners and color
-        prompt_label.setMinimumHeight(40)  # Optional: Set a minimum height to control appearance
+        prompt_label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)  # Allow dynamic height based on content
         font = QFont("Arial", 14)  # Set a nicer font
         prompt_label.setFont(font)  # Apply the font to the label
 
-        # Add prompt label to chat widget layout
-        self.chat_widget_layout.addWidget(prompt_label, alignment=Qt.AlignmentFlag.AlignRight)
+        # Create a scroll area for the prompt label
+        prompt_scroll_area = QScrollArea()
+        prompt_scroll_area.setWidget(prompt_label)
+        prompt_scroll_area.setWidgetResizable(True)
+        prompt_scroll_area.setFixedHeight(150)  # Limit the scrollable area height
+        prompt_scroll_area.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        # Add prompt scroll area to chat widget layout
+        self.chat_widget_layout.addWidget(prompt_scroll_area, alignment=Qt.AlignmentFlag.AlignRight)
 
         # Create a response label
         response_label = QLabel("Searching the web for answers...")
         response_label.setWordWrap(True)  # Enable word wrap for the response label
         response_label.setStyleSheet("QLabel {color: white; border-radius: 15px; background-color: #444444; margin: 10px; padding: 10px;}")  # Rounded corners and color
-        response_label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)  # Allow the label to expand horizontally
+        response_label.setFixedWidth(550)  # Set fixed width for the response
+        response_label.setSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Minimum)  # Allow dynamic height based on content
         response_label.setFont(QFont("Arial", 14))  # Set a nicer font
 
-        # Add the response label to the chat widget layout
-        self.chat_widget_layout.addWidget(response_label, alignment=Qt.AlignmentFlag.AlignLeft)
+        # Create a scroll area for the response label
+        response_scroll_area = QScrollArea()
+        response_scroll_area.setWidget(response_label)
+        response_scroll_area.setWidgetResizable(True)
+        response_scroll_area.setFixedHeight(300)  # Limit the scrollable area height
+        response_scroll_area.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+
+        # Add the response scroll area to the chat widget layout
+        self.chat_widget_layout.addWidget(response_scroll_area, alignment=Qt.AlignmentFlag.AlignLeft)
 
         # Start a thread to fetch the response
         thread = threading.Thread(target=self.concurrent_ask, args=(prompt, response_label))
