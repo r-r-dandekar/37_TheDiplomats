@@ -177,3 +177,4 @@ resources/assets/icons/windows/*
 
 # Tensorflow Model (coz they're huge)
 .safetensors
+.pt
