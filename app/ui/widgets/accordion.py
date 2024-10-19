@@ -4,14 +4,16 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap, QColor
 from ...utils.config import config
 
+
 HEIGHT = 35
-color_light = '#cccccc'
-color_dark = '#b3b3b3'
+color_light = '#262626'
+color_dark = '#404040'
 
 class AccordionSection(QWidget):
 
-    def __init__(self, title, content, color):
+    def __init__(self, title, main_window, color):
         super().__init__()
+        self.main_window = main_window
 
         self.color = color
 
@@ -44,7 +46,7 @@ class AccordionSection(QWidget):
 
         # Title label
         self.title_label = QLabel(title)
-        self.title_label.setStyleSheet("color: black;")
+        self.title_label.setStyleSheet("color: white;")
 
         # Arrow icon on the right
         self.arrow_label = QLabel()
@@ -75,6 +77,7 @@ class AccordionSection(QWidget):
         self.scroll_area.setVisible(False)  # Initially collapsed
         self.scroll_area.setWidget(self.content_area)
         self.scroll_area.setWidgetResizable(True)  
+        self.scroll_area.setStyleSheet(f"background-color: {color_light}; border: 1px solid {color_light};")
 
         # Add the button and content area to the main layout
         self.main_layout.addWidget(self.toggle_button)
@@ -85,6 +88,18 @@ class AccordionSection(QWidget):
         self.setStyleSheet(f"background-color: {color_dark}; padding: 5px; border: 1px solid {color_dark}; margin: 0px;")
 
     def toggle_content(self):
+        items = []
+        while not self.main_window.result_queue.empty():
+            items.append(self.main_window.result_queue.get())
+        
+        for level, log in items:
+            if level == 'critical' and self.color == 'red':
+                self.show_log(log)
+            elif level == 'critical' and self.color == 'orange':
+                self.show_log(log)
+            elif level == 'critical' and self.color == 'green':
+                self.show_log(log)
+
         # Toggle the visibility of the content area
         visible = not self.content_area.isVisible()
         if not visible:
@@ -95,11 +110,10 @@ class AccordionSection(QWidget):
         # Change the arrow icon based on the expanded/collapsed state
         self.arrow_label.setPixmap(self.arrow_down if visible else self.arrow_right)
 
-    def show_list(self, list):
-        for str in list:
-            label = QLabel(str)
-            label.setStyleSheet(f"color: {self.color};")
-            self.content_area_layout.addWidget(label)
+    def show_log(self, string):
+        label = QLabel(string)
+        label.setStyleSheet(f"color: {self.color};")
+        self.content_area_layout.addWidget(label)
 
 
 class Accordion(QWidget):

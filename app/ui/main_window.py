@@ -1,3 +1,4 @@
+import threading
 import sys
 import os
 import subprocess
@@ -14,10 +15,10 @@ from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
 from .widgets.accordion import *
 from ..utils.config import config
-from ..logs import sortlogs
+from ..logs import showlogs as logs_showlogs
 from .chatbot_tab import ChatbotTab
 from PyQt6.QtGui import QTextOption, QIcon  # Added QIcon here
-
+import queue
 
 
 class MainWindow(QMainWindow):
@@ -89,6 +90,9 @@ class MainWindow(QMainWindow):
         Initialize the Main-Window.
         """
         super().__init__()
+
+        self.result_queue = queue.Queue()
+
         # Window-Settings
         self.setWindowTitle(AppConfig.APP_NAME)
         self.setGeometry(100, 100, 600, 200)
@@ -146,11 +150,9 @@ class MainWindow(QMainWindow):
         
         self.chatbot_widget = ChatbotTab()
 
-        self.log_critical = AccordionSection("Critical", "Hello this is a test", 'red')    
-        self.log_non_critical = AccordionSection("Non-Critical", "You can collapse this", 'orange')        
-        self.log_info = AccordionSection("Information", "Just close this if you don't even want to see it...", 'green')        
-
-        self.log_critical.show_list(["hi", 'BUE', "xrthi"])
+        self.log_critical = AccordionSection("Critical", self, 'red')    
+        self.log_non_critical = AccordionSection("Non-Critical", self, 'orange')        
+        self.log_info = AccordionSection("Information", self, 'green')        
 
         logs_widget_layout.setContentsMargins(5,5,5,5)
         logs_widget_layout.setSpacing(3)
@@ -270,10 +272,8 @@ class MainWindow(QMainWindow):
         
     def showlogs(self, index: QModelIndex):
         file_path = self.model.filePath(index)
-        critical, non_critical, info = sortlogs(file_path)
-        self.log_critical.show_list(critical)
-        self.log_non_critical.show_list(non_critical)
-        self.log_info.show_list(info)
+        thread = threading.Thread(target=logs_showlogs, args=(file_path, self, self.result_queue))
+        thread.start()
 
 
 # Standard PyQt app initialization
@@ -281,7 +281,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     palette = app.palette()
     window = MainWindow()
-    if palette.window().color().lightness() < 128:
-        config['theme']='dark'
     window.show()
     sys.exit(app.exec())

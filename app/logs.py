@@ -26,21 +26,12 @@ def infer(text):
 
     return label
 
-def sortlogs(path):
+def showlogs(path, main_window, result_queue):
     list = read_file_to_list(path)
-    critical_list = []
-    non_critical_list = []
-    info_list = []
     for string in list:
         level = infer(string)
         print(level, " ", string)
-        if level == 'critical':
-            critical_list.append(string)
-        elif level == 'non-critical':
-            non_critical_list.append(string)
-        elif level == 'info':
-            info_list.append(string)
-    return (critical_list, non_critical_list, info_list)
+        result_queue.put((level, string))
     
         
 
