@@ -178,3 +178,5 @@ resources/assets/icons/windows/*
 # Tensorflow Model (coz they're huge)
 .safetensors
 .pt
+multi-class-classification/distilbert-finetuned-imdb-multi-label/model.safetensors
+multi-class-classification/distilbert-finetuned-imdb-multi-label/

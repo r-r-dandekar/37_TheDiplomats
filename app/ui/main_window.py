@@ -12,6 +12,7 @@ from PyQt6.QtGui import QFileSystemModel
 from ..utils.config import AppConfig
 from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
+from .widgets.accordion import *
 
 
 class MainWindow(QMainWindow):
@@ -29,7 +30,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Window-Settings
         self.setWindowTitle(AppConfig.APP_NAME)
-        self.setGeometry(100, 0, 800, 600)
+        self.setGeometry(100, 100, 800, 600)
 
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
@@ -57,13 +58,20 @@ class MainWindow(QMainWindow):
         self.errors_navbar.setFixedHeight(50)  # Set fixed height for the navbar to match the toolbar height
         self.right_layout.addWidget(self.errors_navbar)  # Add the errors navbar to the layout
 
+        self.log_critical = AccordionSection("Critical", "Hello this is a test")        
+        self.log_non_critical = AccordionSection("Non-Critical", "You can collapse this")        
+        self.log_info = AccordionSection("Information", "Just close this if you don't even want to see it...")        
+
         # Add a blank space (QTextEdit for demonstration, could be any widget)
-        self.blank_space = QTextEdit(self)
-        self.blank_space.setReadOnly(True)
-        self.blank_space.setPlaceholderText("Blank Space Above Terminal")
-        self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
-        self.blank_space.setFixedHeight(400)
-        self.right_layout.addWidget(self.blank_space, stretch=4)  # Adjusted stretch for blank space
+        # self.blank_space = QTextEdit(self)
+        # self.blank_space.setReadOnly(True)
+        # self.blank_space.setPlaceholderText("Blank Space Above Terminal")
+        # self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
+        # self.blank_space.setFixedHeight(400)
+        self.right_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        self.right_layout.addWidget(self.log_critical, stretch=4)  # Adjusted stretch for blank space
+        self.right_layout.addWidget(self.log_non_critical, stretch=4)  # Adjusted stretch for blank space
+        self.right_layout.addWidget(self.log_info, stretch=4)  # Adjusted stretch for blank space
         self.terminal = self.create_terminal()  # Create the terminal
         self.right_layout.addWidget(self.terminal, stretch=6)  # Adjusted stretch for terminal
 
@@ -77,25 +85,6 @@ class MainWindow(QMainWindow):
 
         # Create and add the menu bar
         self.setMenuBar(MenuBar(self))  # Pass the main window to MenuBar
-
-        # Initialize and start the command prompt
-        self.process = QProcess()
-        self.process.start("cmd.exe")
-        self.process.readyReadStandardOutput.connect(self.handle_output)
-        self.process.readyReadStandardError.connect(self.handle_error)
-
-        # Run a command in the terminal at startup
-        self.run_command_in_terminal("echo Welcome to the integrated terminal!\n")
-
-    def closeEvent(self, event) -> None:
-        """
-        Overrides the close event to terminate the QProcess if it's running.
-        """
-        if self.process.state() == QProcess.ProcessState.Running:
-            self.process.terminate()  # Safely terminate the process
-            self.process.waitForFinished()  # Wait for the process to finish
-
-        event.accept()  # Accept the event to close the window
 
     def create_treeview_container(self) -> QWidget:
         """
@@ -135,56 +124,7 @@ class MainWindow(QMainWindow):
         terminal.setWordWrapMode(QTextOption.WrapMode.NoWrap)
         terminal.setLineWrapMode(QTextEdit.LineWrapMode.NoWrap)
 
-        # Capture user input from the terminal
-        terminal.keyPressEvent = self.custom_keypress_event(terminal.keyPressEvent)
-
         return terminal
-
-    def custom_keypress_event(self, original_keypress_event):
-        """
-        Captures key press events to allow the terminal to execute commands.
-        """
-        def new_keypress_event(event):
-            if event.key() == Qt.Key.Key_Return or event.key() == Qt.Key.Key_Enter:
-                command = self.terminal.toPlainText().splitlines()[-1]
-                self.send_command_to_process(command)  # Send command to the process
-            original_keypress_event(event)
-        return new_keypress_event
-
-    def send_command_to_process(self, command: str) -> None:
-        """
-        Sends the command to the command prompt process.
-        """
-        command += "\n"  # Append newline to simulate Enter key
-        self.process.write(command.encode())  # Write command to process
-
-    def handle_output(self):
-        """
-        Handles output from the command prompt and appends it to the terminal widget.
-        """
-        data = self.process.readAllStandardOutput()
-        self.terminal.append(data.data().decode())
-
-    def handle_error(self):
-        """
-        Handles error output from the command prompt.
-        """
-        data = self.process.readAllStandardError()
-        self.terminal.append(data.data().decode())
-
-    def run_command_in_terminal(self, command: str) -> None:
-        """
-        Executes a system command and displays the output in the terminal widget.
-        """
-        try:
-            # Execute the command and get the output
-            result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
-            # Display the output in the terminal
-            self.terminal.append(result.stdout)
-            self.terminal.append(result.stderr)
-        except Exception as e:
-            self.terminal.append(f"Error running command: {str(e)}")
 
     def create_treeview(self) -> QTreeView:
         """
