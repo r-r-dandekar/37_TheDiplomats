@@ -104,6 +104,7 @@ class MainWindow(QMainWindow):
 
         # Create treeview container
         self.treeview_container = self.create_treeview_container()
+        
 
         # Add the tree view container to the left layout
         self.left_layout.addWidget(self.treeview_container)  # Add tree view container
@@ -178,6 +179,7 @@ class MainWindow(QMainWindow):
 
         # Create and add the tree view
         self.treeview = self.create_treeview()
+        self.treeview.clicked.connect(self.showlog)
         v_layout.addWidget(self.treeview)  # Add the tree view to the vertical layout
 
         container.setLayout(v_layout)
@@ -226,6 +228,10 @@ class MainWindow(QMainWindow):
             self.treeview.setRootIndex(self.model.index(folder_path))
         else:
             print("No folder selected.")
+        
+    def showlog(self, index: QModelIndex):
+        file_path = self.model.filePath(index)
+        showlog(file_path)
 
 
 # Standard PyQt app initialization
