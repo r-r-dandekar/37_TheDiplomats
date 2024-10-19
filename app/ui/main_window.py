@@ -13,6 +13,7 @@ from ..utils.config import AppConfig
 from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
 from .widgets.accordion import *
+from ..utils.config import config
 
 
 class MainWindow(QMainWindow):
@@ -192,6 +193,9 @@ class MainWindow(QMainWindow):
 # Standard PyQt app initialization
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    palette = app.palette()
     window = MainWindow()
+    if palette.window().color().lightness() < 128:
+        config['theme']='dark'
     window.show()
     sys.exit(app.exec())

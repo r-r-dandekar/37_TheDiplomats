@@ -2,10 +2,15 @@ import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QSizePolicy 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap, QColor
+from ...utils.config import config
 
 HEIGHT = 35
-color_light = '#cccccc'
-color_dark = '#999999'
+if config['theme']=='dark':
+    color_light = '#404040'
+    color_dark = '#262626'
+else:
+    color_light = '#cccccc'
+    color_dark = '#999999'
 
 class AccordionSection(QWidget):
 

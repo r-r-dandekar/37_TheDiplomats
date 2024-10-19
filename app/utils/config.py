@@ -1,5 +1,8 @@
 ''' app/utils/config.py '''
 
+config = {
+    'theme': 'light'
+}
 
 class AppConfig:
     """
