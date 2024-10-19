@@ -8,7 +8,7 @@ class AppConfig:
     """
     Configuration File
     """
-    APP_NAME: str = "PyQt Profiling Tool"
+    APP_NAME: str = "ErrorLens"
 
     @classmethod
     def initialize(cls) -> None:

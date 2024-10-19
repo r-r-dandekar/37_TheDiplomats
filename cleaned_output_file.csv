@@ -1,0 +1,2666 @@
+Level,Content
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.126.22:50010 is added to blk_-8298519990603402919 size 67108864
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.26.177:50010 is added to blk_6928449948805597176 size 67108864
+
+info,Session: 30546354_2950240925 initialized by client WindowsUpdateAgent.
+
+info,Deleting block blk_-4551689611865410817 file /mnt/hadoop/dfs/data/current/blk_-4551689611865410817
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/sortrand2/_temporary/_task_200811101024_0003_r_000257_0/part-00257. blk_-1732662141253491971
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.27.63:50010 is added to blk_-7985144765168396303 size 67108864
+
+info,0000000a Performing 1 operations; 1 are not lock/unlock and follow:
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Session: 30546174_147195426 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546174_35509038 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3108381~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546174_176967128 initialized by client WindowsUpdateAgent.
+
+info,Receiving block blk_-6380328072112550668 src: /10.250.6.191:37701 dest: /10.250.6.191:50010
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Received block blk_1600228140214754078 of size 67108864 from /10.251.90.81
+
+info,Received block blk_-9211699406261033878 of size 67108864 from /10.251.30.85
+
+info,Receiving block blk_-295306975763175640 src: /10.250.9.207:53270 dest: /10.250.9.207:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,"Read out cached package applicability for package: Package_for_KB3037574~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.7.230:50010 is added to blk_4984720043834039361 size 67108864
+
+info,Deleting block blk_-2658615574293326723 file /mnt/hadoop/dfs/data/current/subdir37/blk_-2658615574293326723
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 4915 in scoreboard slot 7
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB2763523~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,jk2_init() Found child 32731 in scoreboard slot 8
+
+info,Deleting block blk_6491888411266994867 file /mnt/hadoop/dfs/data/current/subdir39/blk_6491888411266994867
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.37:50010 is added to blk_-524128780228307052 size 67108864
+
+critical,mod_jk child workerEnv in error state 7
+
+info,BLOCK* NameSystem.delete: blk_3428998332517532825 is added to invalidSet of 10.251.43.192:50010
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.197.226:50010 is added to blk_-23492739449820023 size 67108864
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.70.211:50010 is added to blk_-5471660287004025096 size 67108864
+
+info,Deleting block blk_-4311652947826112510 file /mnt/hadoop/dfs/data/current/subdir57/blk_-4311652947826112510
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Received block blk_-4846710336436578833 of size 67108864 from /10.251.203.129
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Receiving block blk_9121519145462575118 src: /10.250.10.223:58281 dest: /10.250.10.223:50010
+
+info,jk2_init() Found child 8533 in scoreboard slot 8
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,"Read out cached package applicability for package: Package_for_KB2532531~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:112"
+
+info,BLOCK* NameSystem.delete: blk_-4269939382058952254 is added to invalidSet of 10.251.203.129:50010
+
+info,Received block blk_3084588477220583373 of size 67108864 from /10.251.125.174
+
+info,Received block blk_8968608251219902913 of size 67108864 from /10.251.195.52
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/sortrand/_temporary/_task_200811092030_0002_r_000169_0/part-00169. blk_-7105305952901940477
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,BLOCK* ask 10.250.17.177:50010 to delete  blk_-8570780307468499817 blk_-9122557405432088649 blk_-4393063808227796056 blk_8767569714374844347 blk_7079754042611867581 blk_7608961006114219538 blk_-5017273584996436939 blk_-6537833125980536955 blk_7610838808763810123 blk_3300803097775546532 blk_-5120750586032922592 blk_1577274266662884430 blk_765879159867598347 blk_-9076085976403711202 blk_-3198963348573340497 blk_-4645750029177277209 blk_-5136142986912961316 blk_5677959846373741243 blk_2107477892986152528 blk_-4235116161537008844 blk_6082535783543982566 blk_-4809870147222033236 blk_8818706925296961012 blk_-5203577173046267127 blk_189089569009261656 blk_446299976487589160 blk_-3916247521166632303 blk_-3324962406687427922 blk_-1807424528783081572 blk_-6858401049333055963 blk_6036564204960295926 blk_-8140723044408248078 blk_-3800132731140204959 blk_1716344083117307767 blk_-5194808114606613364 blk_-5473871016976323232 blk_2920934363167004552 blk_8736689095894369097 blk_-7642734632751940776 blk_3408482260833769309 blk_118013751374560901 blk_7963891081239759520 blk_3813114133944383323 blk_3042818489384932576 blk_-4570173726231458270 blk_-1564644006975920581 blk_338095650783321996 blk_3150135312641203550 blk_4285859645577726288 blk_3438772130782939627 blk_2634772258588877972 blk_-6795664812575964130 blk_3923069610304693233 blk_-1782996202120067721 blk_2004418049430157212 blk_1932147224007687756 blk_-582901062969027153 blk_5072240701440032119 blk_-7919006477393039068 blk_-7318022361288598312 blk_-6974693594143537436 blk_-5435767047126325206 blk_-5805500288959332434 blk_-7109885589081848850 blk_2161580591957523893 blk_7240227881194993860 blk_-8298405680648445349 blk_-4253026248821272215 blk_8377661448601579317 blk_8029153852899017155 blk_-8754388319080705916 blk_-7844092300527332901 blk_710178463364063355 blk_-5136849989188547884 blk_8393887138377503163 blk_-6950176077776664217 blk_-6488701068659548195 blk_2537458728254532453 blk_364441107933628577 blk_6207861897580168557 blk_8814943807366894581 blk_-4150682644311695471 blk_9174833667156726933 blk_649427218152856001 blk_-7403541028238011236 blk_-334982586592048773 blk_61908781908925992 blk_6385574357371832424 blk_-66376131060945541 blk_1372596948297458670 blk_-3389135155401857220 blk_-6035411221441929663 blk_-5127580069634421247 blk_-5685246533892022418 blk_4977937528993040451 blk_5680538862600094527 blk_-8378747462487962732 blk_425101290285860876 blk_6306622708327890839 blk_-1067866602168873257
+
+info,Session: 30546174_49409833 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546174_132944611 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/randtxt/_temporary/_task_200811092030_0003_m_001630_0/part-01630. blk_-8645365827804358878
+
+info,jk2_init() Found child 5579 in scoreboard slot 6
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Received block blk_7736147489540456118 of size 67108864 from /10.251.74.227
+
+info,Received block blk_5915244038969911075 of size 67108864 from /10.250.11.53
+
+info,jk2_init() Found child 1931 in scoreboard slot 7
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.delete: blk_-5382946262718129284 is added to invalidSet of 10.250.5.161:50010
+
+info,Session: 30546354_3275569532 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 309 in scoreboard slot 7
+
+critical,mod_jk child workerEnv in error state 6
+
+info,"Read out cached package applicability for package: Package_for_KB3023215~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,"Read out cached package applicability for package: Package_for_KB3055642~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Deleting block blk_3076992299328673559 file /mnt/hadoop/dfs/data/current/subdir54/blk_3076992299328673559
+
+info,10.251.195.52:50010 Served block blk_6655622109568310643 to /10.251.195.52
+
+warning,10.251.107.50:50010:Got exception while serving blk_-4737948505610037427 to /10.251.75.79:
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.110.68:50010 is added to blk_-3663004104512304532 size 67108864
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.delete: blk_5203504995927133832 is added to invalidSet of 10.250.13.240:50010
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 1970 in scoreboard slot 6
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 2051 in scoreboard slot 8
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+critical,mod_jk child workerEnv in error state 6
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand7/_temporary/_task_200811101024_0014_m_001940_0/part-01940. blk_1910319264393500537
+
+critical,mod_jk child workerEnv in error state 7
+
+info,BLOCK* NameSystem.delete: blk_-5403209762224435166 is added to invalidSet of 10.251.125.193:50010
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Deleting block blk_-7515058933811567980 file /mnt/hadoop/dfs/data/current/subdir1/blk_-7515058933811567980
+
+info,Received block blk_-3909548841543565741 of size 3542967 from /10.251.195.33
+
+info,Session: 30546354_2973972282 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 32682 in scoreboard slot 7
+
+info,"Read out cached package applicability for package: Package_for_KB2800095~31bf3856ad364e35~amd64~~6.1.2.0, ApplicableState: 112, CurrentState:112"
+
+info,Received block blk_-8835758154471700679 of size 67108864 from /10.251.73.188
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.delete: blk_7045475543362904558 is added to invalidSet of 10.251.106.214:50010
+
+info,Verification succeeded for blk_3141363517520802396
+
+warning,10.251.26.177:50010:Got exception while serving blk_3848747149919646864 to /10.251.125.174:
+
+info,jk2_init() Found child 5270 in scoreboard slot 6
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,PacketResponder 0 for block blk_-1387034299358896632 terminating
+
+info,Session: 30546174_169016674 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 7
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Session: 30546174_167476586 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 5516 in scoreboard slot 8
+
+info,"Read out cached package applicability for package: Package_for_KB3184471~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 0, CurrentState:0"
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 347 in scoreboard slot 6
+
+info,PacketResponder 0 for block blk_712730845180531820 terminating
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.42.207:50010 is added to blk_2119401975697524206 size 67108864
+
+info,jk2_init() Found child 5348 in scoreboard slot 7
+
+info,jk2_init() Found child 6740 in scoreboard slot 7
+
+info,jk2_init() Found child 5985 in scoreboard slot 9
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 32442 in scoreboard slot 7
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,PacketResponder 2 for block blk_-4566099704755845087 terminating
+
+info,jk2_init() Found child 32448 in scoreboard slot 8
+
+warning,10.251.127.243:50010:Got exception while serving blk_7760079751081658559 to /10.251.215.70:
+
+info,jk2_init() Found child 3670 in scoreboard slot 8
+
+info,Deleting block blk_7754477838724397551 file /mnt/hadoop/dfs/data/current/subdir46/blk_7754477838724397551
+
+info,Session: 30546354_2937600202 initialized by client WindowsUpdateAgent.
+
+info,PacketResponder 1 for block blk_1927336911952959118 terminating
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Session: 30546354_2934110002 initialized by client WindowsUpdateAgent.
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,PacketResponder 0 for block blk_34905976850091068 terminating
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,mod_jk child workerEnv in error state 8
+
+info,jk2_init() Found child 1886 in scoreboard slot 7
+
+info,"Read out cached package applicability for package: Package_for_KB2929733~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB2968294~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,jk2_init() Found child 1932 in scoreboard slot 8
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 5810 in scoreboard slot 9
+
+info,Session: 30546354_3215406091 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 1278 in scoreboard slot 8
+
+info,jk2_init() Found child 6400 in scoreboard slot 7
+
+info,Receiving block blk_6417614801998326532 src: /10.251.214.67:48694 dest: /10.251.214.67:50010
+
+info,jk2_init() Found child 5019 in scoreboard slot 7
+
+info,"Read out cached package applicability for package: Package_for_KB3184471~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 0, CurrentState:0"
+
+info,"No startup processing required, TrustedInstaller service was not set as autostart, or else a reboot is still pending."
+
+info,"Read out cached package applicability for package: Package_for_KB3108371~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,jk2_init() Found child 1862 in scoreboard slot 6
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546174_101102789 initialized by client WindowsUpdateAgent.
+
+info,Deleting block blk_8699831307500970779 file /mnt/hadoop/dfs/data/current/subdir54/blk_8699831307500970779
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Session: 30546174_130874492 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546354_3233207109 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 1413 in scoreboard slot 6
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 4959 in scoreboard slot 8
+
+info,jk2_init() Found child 6750 in scoreboard slot 8
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 6042 in scoreboard slot 7
+
+info,"Loading offline registry hive: SECURITY, into registry key '{bf1a281b-ad7b-4476-ac95-f47682990ce7}GLOBALROOT/Device/HarddiskVolumeShadowCopy2/Windows/System32/config/SECURITY' from path '\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy2\Windows\System32\config\SECURITY'."
+
+info,jk2_init() Found child 4937 in scoreboard slot 7
+
+info,jk2_init() Found child 32560 in scoreboard slot 6
+
+info,"Read out cached package applicability for package: Package_for_KB3177186~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546174_110243312 initialized by client WindowsUpdateAgent.
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,"Read out cached package applicability for package: Package_for_KB3175024~31bf3856ad364e35~amd64~~6.1.2.0, ApplicableState: 112, CurrentState:112"
+
+info,Receiving block blk_-7238035741206373733 src: /10.251.202.209:59561 dest: /10.251.202.209:50010
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Verification succeeded for blk_-1383276859207001328
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Receiving block blk_6868050965297613251 src: /10.251.201.204:47734 dest: /10.251.201.204:50010
+
+info,Session: 30546174_103902949 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546174_49899861 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 1864 in scoreboard slot 7
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.38.197:50010 is added to blk_8763662564934652249 size 67108864
+
+info,Session: 30546174_46979694 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3045685~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Session: 30546174_156825976 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3086255~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Session: 30546354_3344103452 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546354_3313121680 initialized by client WindowsUpdateAgent.
+
+info,Deleting block blk_-2518425063392446785 file /mnt/hadoop/dfs/data/current/subdir6/blk_-2518425063392446785
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.214.130:50010 is added to blk_-4427507243535536615 size 67108864
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.107.196:50010 is added to blk_-2843780069100181052 size 67108864
+
+info,PacketResponder 0 for block blk_-1067234447809438340 terminating
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 7
+
+critical,mod_jk child workerEnv in error state 6
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Received block blk_6446927133528675675 of size 67108864 from /10.251.39.209
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 5050 in scoreboard slot 8
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 1388 in scoreboard slot 8
+
+info,Session: 30546354_3176413861 initialized by client WindowsUpdateAgent.
+
+info,Deleting block blk_9142114171015520823 file /mnt/hadoop/dfs/data/current/subdir48/blk_9142114171015520823
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 6399 in scoreboard slot 6
+
+info,"Read out cached package applicability for package: Package_for_KB3059317~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546354_2966921879 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546174_27758594 initialized by client WindowsUpdateAgent.
+
+info,Deleting block blk_107727140948970996 file /mnt/hadoop/dfs/data/current/subdir33/blk_107727140948970996
+
+info,Session: 30546354_3192394775 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.delete: blk_-6477590833521072407 is added to invalidSet of 10.251.39.179:50010
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 6037 in scoreboard slot 6
+
+critical,mod_jk child workerEnv in error state 8
+
+info,Received block blk_-1614641487214609125 of size 67108864 from /10.251.193.175
+
+info,BLOCK* NameSystem.delete: blk_434034567989619521 is added to invalidSet of 10.251.91.15:50010
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Deleting block blk_4007982883396598426 file /mnt/hadoop/dfs/data/current/subdir13/blk_4007982883396598426
+
+info,jk2_init() Found child 32440 in scoreboard slot 10
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.127.47:50010 is added to blk_-3990317238913332296 size 67108864
+
+info,Session: 30546354_2839784607 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3164035~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Receiving block blk_-7678242108759603056 src: /10.251.125.193:33553 dest: /10.251.125.193:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 5878 in scoreboard slot 6
+
+info,PacketResponder 1 for block blk_2016964533702776852 terminating
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 6
+
+info,10.251.67.225:50010 Served block blk_2038610753592374847 to /10.250.18.114
+
+info,Received block blk_5648034804629064273 of size 67108864 from /10.251.91.159
+
+info,jk2_init() Found child 3690 in scoreboard slot 6
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand7/_temporary/_task_200811101024_0014_m_001649_0/part-01649. blk_-5581540863377925517
+
+info,"Read out cached package applicability for package: Package_for_KB2773072~31bf3856ad364e35~amd64~~6.1.1.5, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.73.220:50010 is added to blk_3073404534069578592 size 67108864
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.197.161:50010 is added to blk_-3724350946705225881 size 67108864
+
+info,jk2_init() Found child 1336 in scoreboard slot 10
+
+info,Session: 30546174_107333146 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 1999 in scoreboard slot 6
+
+info,Deleting block blk_7108974241330205218 file /mnt/hadoop/dfs/data/current/subdir22/blk_7108974241330205218
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Receiving block blk_-8198423074054354279 src: /10.251.203.149:46429 dest: /10.251.203.149:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 5385 in scoreboard slot 8
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Received block blk_-3607860197409267245 of size 28503188 from /10.251.31.180
+
+critical,jk2_init() Can't find child 5053 in scoreboard
+
+info,jk2_init() Found child 5435 in scoreboard slot 7
+
+info,Receiving block blk_1512136249403454074 src: /10.250.7.244:47958 dest: /10.250.7.244:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,00000010@2016/9/27:20:40:54.787 CSI Transaction @0x47e9e0 destroyed
+
+info,Deleting block blk_7190156588310412626 file /mnt/hadoop/dfs/data/current/subdir30/blk_7190156588310412626
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Receiving block blk_8452214765874767801 src: /10.251.38.197:60409 dest: /10.251.38.197:50010
+
+info,jk2_init() Found child 5991 in scoreboard slot 7
+
+info,jk2_init() Found child 6600 in scoreboard slot 7
+
+info,PacketResponder 0 for block blk_5225719677049010638 terminating
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 5936 in scoreboard slot 6
+
+info,jk2_init() Found child 32557 in scoreboard slot 7
+
+info,BLOCK* NameSystem.delete: blk_-3275788837420923000 is added to invalidSet of 10.251.109.236:50010
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 1957 in scoreboard slot 8
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 1990 in scoreboard slot 9
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 10
+
+info,PacketResponder 1 for block blk_-2421414377433740760 terminating
+
+info,Receiving block blk_-2667669005094349452 src: /10.251.203.149:41751 dest: /10.251.203.149:50010
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.delete: blk_-2012430628930443984 is added to invalidSet of 10.250.11.100:50010
+
+info,"Read out cached package applicability for package: Package_for_KB2973201~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 112, CurrentState:112"
+
+info,Deleting block blk_5905689738251144455 file /mnt/hadoop/dfs/data/current/blk_5905689738251144455
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546354_2852095311 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 6434 in scoreboard slot 7
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 1354 in scoreboard slot 9
+
+info,Session: 30546174_108353204 initialized by client WindowsUpdateAgent.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 32360 in scoreboard slot 11
+
+info,Receiving block blk_8116683912654412228 src: /10.251.39.179:42019 dest: /10.251.39.179:50010
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 32683 in scoreboard slot 10
+
+info,jk2_init() Found child 5003 in scoreboard slot 6
+
+info,Deleting block blk_5948455948626091880 file /mnt/hadoop/dfs/data/current/subdir28/blk_5948455948626091880
+
+info,jk2_init() Found child 1900 in scoreboard slot 8
+
+non-critical,"SQM: Failed to start upload with file pattern: C:\Windows\servicing\sqm\*_std.sqm, flags: 0x2 [HRESULT = 0x80004005 - E_FAIL]"
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,PacketResponder 1 for block blk_38865049064139660 terminating
+
+info,Receiving block blk_-878226404201600469 src: /10.250.7.96:40849 dest: /10.250.7.96:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 6651 in scoreboard slot 8
+
+info,"Read out cached package applicability for package: Package_for_KB2563227~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.31.5:50010 is added to blk_5813361416484537967 size 67108864
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Session: 30546354_3338053106 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 6062 in scoreboard slot 9
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,PacketResponder 1 for block blk_-191333338640084691 terminating
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,jk2_init() Can't find child 5620 in scoreboard
+
+info,Received block blk_1473949624670719319 src: /10.251.29.239:35617 dest: /10.251.29.239:50010 of size 67108864
+
+info,Received block blk_1411218759880637753 of size 67108864 from /10.251.123.20
+
+critical,mod_jk child workerEnv in error state 6
+
+info,"Read out cached package applicability for package: Package_for_KB2703157~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:0"
+
+info,Session: 30546174_138284916 initialized by client WindowsUpdateAgent.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand6/_temporary/_task_200811101024_0013_m_000079_0/part-00079. blk_4225726256421431188
+
+info,Session: 30546354_3297210770 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 32451 in scoreboard slot 6
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.38.197:50010 is added to blk_-5427918313707752877 size 67108864
+
+info,"Read out cached package applicability for package: Package_for_KB2515325~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 7
+
+info,jk2_init() Found child 6054 in scoreboard slot 9
+
+info,Session: 30546174_97282571 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.203.166:50010 is added to blk_-2332150303475653460 size 67108864
+
+info,jk2_init() Found child 2763 in scoreboard slot 7
+
+info,Session: 30546354_3337953101 initialized by client WindowsUpdateAgent.
+
+warning,10.251.67.225:50010:Got exception while serving blk_-6900989714336081087 to /10.251.25.237:
+
+info,Session: 30546354_3228776856 initialized by client WindowsUpdateAgent.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+critical,mod_jk child init 1 -2
+
+info,Receiving block blk_102441832197223997 src: /10.251.123.195:49611 dest: /10.251.123.195:50010
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Deleting block blk_5528471097481810388 file /mnt/hadoop/dfs/data/current/subdir5/blk_5528471097481810388
+
+info,Receiving block blk_-852118157909078164 src: /10.251.30.101:57254 dest: /10.251.30.101:50010
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand8/_temporary/_task_200811101024_0015_m_001294_0/part-01294. blk_4214952053910973364
+
+info,jk2_init() Found child 1816 in scoreboard slot 9
+
+info,Received block blk_8655748951361667770 of size 67108864 from /10.251.109.236
+
+info,PacketResponder 0 for block blk_-7024895786822269814 terminating
+
+info,10.250.19.227:50010 Served block blk_3979872751691718643 to /10.250.19.227
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand6/_temporary/_task_200811101024_0013_m_001983_0/part-01983. blk_8861349372992394289
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,PacketResponder 1 for block blk_-3802183646922512795 terminating
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Receiving block blk_8596624696139957935 src: /10.251.214.175:41468 dest: /10.251.214.175:50010
+
+info,Receiving block blk_-7486746679002157277 src: /10.251.42.207:57669 dest: /10.251.42.207:50010
+
+info,Received block blk_560063894682806537 of size 67108864 from /10.251.194.129
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.67.4:50010 is added to blk_-8924134715029713489 size 67108864
+
+info,Session: 30546354_3276819604 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 32701 in scoreboard slot 10
+
+info,Session: 30546174_49059813 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.127.243:50010 is added to blk_-719178972315562824 size 67108864
+
+info,jk2_init() Found child 32578 in scoreboard slot 8
+
+info,Session: 30546354_2967631919 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 5899 in scoreboard slot 7
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Receiving block blk_-1798958443298220150 src: /10.251.111.209:57419 dest: /10.251.111.209:50010
+
+info,Receiving block blk_5977008528949258706 src: /10.251.214.32:43860 dest: /10.251.214.32:50010
+
+info,jk2_init() Found child 5428 in scoreboard slot 8
+
+info,"Read out cached package applicability for package: Package_for_KB2853587~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 0, CurrentState:0"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 1863 in scoreboard slot 9
+
+info,Session: 30546354_3191924748 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546173_4261722401 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+warning,10.250.11.53:50010:Got exception while serving blk_-7125370327234065733 to /10.250.15.240:
+
+info,jk2_init() Found child 1936 in scoreboard slot 8
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.30.6:50010 is added to blk_1119272693889755844 size 67108864
+
+info,jk2_init() Found child 32529 in scoreboard slot 6
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Received block blk_4539833452749813987 of size 67108864 from /10.251.42.16
+
+info,"Read out cached package applicability for package: Package_for_KB3078601~31bf3856ad364e35~amd64~~6.1.1.5, ApplicableState: 112, CurrentState:112"
+
+info,Received block blk_-2117066166574895060 of size 67108864 from /10.251.73.188
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.26.177:50010 is added to blk_-6338549285508312302 size 3530010
+
+info,"Read out cached package applicability for package: Package_for_KB2654428~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Received block blk_-577659324269246113 of size 67108864 from /10.251.203.179
+
+info,"Read out cached package applicability for package: Package_for_KB3139398~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,PacketResponder 2 for block blk_5454423648092670683 terminating
+
+info,Received block blk_-2129171714384027465 of size 67108864 from /10.251.75.228
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Session: 30546174_97232568 initialized by client WindowsUpdateAgent.
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 6028 in scoreboard slot 9
+
+info,Unloading offline registry hive: {bf1a281b-ad7b-4476-ac95-f47682990ce7}GLOBALROOT/Device/HarddiskVolumeShadowCopy2/Users/default/ntuser.dat
+
+info,Receiving block blk_-5646228903161999640 src: /10.251.71.97:60870 dest: /10.251.71.97:50010
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.228:50010 is added to blk_-2480595760294717232 size 67108864
+
+info,jk2_init() Found child 1501 in scoreboard slot 7
+
+info,Deleting block blk_8483848473254499625 file /mnt/hadoop/dfs/data/current/subdir51/blk_8483848473254499625
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546354_3327172484 initialized by client WindowsUpdateAgent.
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,PacketResponder 1 for block blk_3940282600163903101 terminating
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,10.250.10.213:50010 Served block blk_-1125621902344947014 to /10.250.10.213
+
+info,Session: 30546174_44629559 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 6
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 6435 in scoreboard slot 8
+
+info,jk2_init() Found child 1913 in scoreboard slot 7
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,"00000006 Created NT transaction (seq 1) result 0x00000000, handle @0x218"
+
+info,Receiving block blk_1606295458729964667 src: /10.251.214.32:47910 dest: /10.251.214.32:50010
+
+non-critical,Failed to internally open package. [HRESULT = 0x800f0805 - CBS_E_INVALID_PACKAGE]
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Receiving block blk_-7764040409370932316 src: /10.251.125.237:58496 dest: /10.251.125.237:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Received block blk_2474460483915499078 of size 67108864 from /10.251.195.52
+
+info,BLOCK* NameSystem.delete: blk_-1641081065757890722 is added to invalidSet of 10.251.107.242:50010
+
+info,jk2_init() Found child 5984 in scoreboard slot 8
+
+info,Deleting block blk_9014154925388243050 file /mnt/hadoop/dfs/data/current/subdir28/blk_9014154925388243050
+
+info,Receiving block blk_-4967783186426171722 src: /10.251.39.192:57105 dest: /10.251.39.192:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Session: 30546354_3045146353 initialized by client WindowsUpdateAgent.
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,"Read out cached package applicability for package: Package_for_KB2579686~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 32755 in scoreboard slot 8
+
+info,PacketResponder 1 for block blk_-2780312306380730204 terminating
+
+info,Deleting block blk_-8167717961644709843 file /mnt/hadoop/dfs/data/current/blk_-8167717961644709843
+
+info,"Read out cached package applicability for package: Package_for_KB2511455~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.110.8:50010 is added to blk_-1661553043410372067 size 67108864
+
+info,Receiving block blk_6585429064641693815 src: /10.250.10.6:38158 dest: /10.250.10.6:50010
+
+info,Session: 11152_142416105 initialized by client SPP.
+
+info,BLOCK* NameSystem.delete: blk_1275198635723397883 is added to invalidSet of 10.251.202.134:50010
+
+info,Receiving block blk_-5144503768267321004 src: /10.251.107.19:36862 dest: /10.251.107.19:50010
+
+info,Session: 30546354_3301050990 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.123.132:50010 is added to blk_8527475857502481768 size 67108864
+
+info,PacketResponder 1 for block blk_8229768485681546149 terminating
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Receiving block blk_-6412155847905320411 src: /10.251.30.85:58995 dest: /10.251.30.85:50010
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Deleting block blk_6163400028286940197 file /mnt/hadoop/dfs/data/current/subdir7/blk_6163400028286940197
+
+info,Session: 30546354_3343473416 initialized by client WindowsUpdateAgent.
+
+info,PacketResponder 0 for block blk_2508619583759354778 terminating
+
+critical,[client 218.39.132.175] Directory index forbidden by rule: /var/www/html/
+
+info,PacketResponder 2 for block blk_-3710747952520609225 terminating
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Received block blk_-5974833545991408899 of size 67108864 from /10.251.31.180
+
+info,Receiving block blk_-8524274644018377752 src: /10.251.42.16:33011 dest: /10.251.42.16:50010
+
+info,Received block blk_8772892713521115147 of size 67108864 from /10.251.194.245
+
+info,"Read out cached package applicability for package: Package_for_KB2972211~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,jk2_init() Found child 5970 in scoreboard slot 6
+
+warning,10.251.215.70:50010:Got exception while serving blk_-20269367189114433 to /10.251.30.179:
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.10.144:50010 is added to blk_3243316191092266549 size 67108864
+
+info,Session: 30546354_3275839548 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3150220~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 5592 in scoreboard slot 8
+
+info,Receiving block blk_1744485040428751334 src: /10.250.5.237:52234 dest: /10.250.5.237:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Session: 30546174_49119816 initialized by client WindowsUpdateAgent.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+critical,mod_jk child workerEnv in error state 8
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Receiving block blk_4742178675580222210 src: /10.251.42.9:60232 dest: /10.251.42.9:50010
+
+warning,10.251.31.5:50010:Got exception while serving blk_6332892729727950039 to /10.251.123.1:
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.193:50010 is added to blk_4577632468651859430 size 67108864
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Received block blk_241585185788373386 of size 67108864 from /10.251.111.80
+
+warning,10.251.90.64:50010:Got exception while serving blk_-4841792440390267307 to /10.251.90.239:
+
+info,"Read out cached package applicability for package: Package_for_KB3005788~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:0"
+
+info,"Read out cached package applicability for package: Package_for_KB3045685~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB2758857~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB2809900~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 0, CurrentState:0"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 6442 in scoreboard slot 6
+
+info,jk2_init() Found child 1951 in scoreboard slot 7
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 32581 in scoreboard slot 7
+
+info,"Read out cached package applicability for package: Package_for_KB3142042~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 112, CurrentState:112"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Verification succeeded for blk_-6160667975382232149
+
+warning,10.251.39.179:50010:Got exception while serving blk_-8558281124275910849 to /10.251.30.134:
+
+info,PacketResponder 1 for block blk_2151150262081352617 terminating
+
+info,jk2_init() Found child 1834 in scoreboard slot 8
+
+info,Received block blk_5118390778403008591 of size 67108864 from /10.251.30.101
+
+info,Receiving block blk_691517018986659607 src: /10.251.195.70:59379 dest: /10.251.195.70:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+critical,mod_jk child workerEnv in error state 6
+
+critical,mod_jk child init 1 -2
+
+info,Session: 30546354_2850665229 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 6451 in scoreboard slot 7
+
+info,jk2_init() Found child 1397 in scoreboard slot 7
+
+warning,SQM: Warning: Failed to upload all unsent reports. [HRESULT = 0x80004005 - E_FAIL]
+
+info,jk2_init() Found child 6260 in scoreboard slot 7
+
+info,"Read out cached package applicability for package: Package_for_KB2846960~31bf3856ad364e35~amd64~~6.1.1.3, ApplicableState: 80, CurrentState:112"
+
+info,Session: 30546354_3341763318 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Received block blk_-290874442865281380 of size 28497700 from /10.251.203.179
+
+info,"Read out cached package applicability for package: Package_for_KB2585542~31bf3856ad364e35~amd64~~6.1.1.3, ApplicableState: 80, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 6
+
+info,BLOCK* NameSystem.delete: blk_-6117917602803602155 is added to invalidSet of 10.251.67.211:50010
+
+info,PacketResponder 0 for block blk_3958940914408609637 terminating
+
+info,Received block blk_692184983396207285 of size 67108864 from /10.250.6.214
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,PacketResponder 0 for block blk_3160319368100972992 terminating
+
+info,SQM: Initializing online with Windows opt-in: False
+
+info,jk2_init() Found child 32652 in scoreboard slot 7
+
+info,BLOCK* NameSystem.delete: blk_-2225353020301959077 is added to invalidSet of 10.251.125.237:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 1324 in scoreboard slot 7
+
+info,Session: 30546174_10517608 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB2716513~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:0"
+
+info,"Read out cached package applicability for package: Package_for_KB2809900~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 0, CurrentState:0"
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,PacketResponder 0 for block blk_6610244864386894422 terminating
+
+info,Session: 30546174_149225542 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3184122~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546354_2981802730 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB2985461~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,"Read out cached package applicability for package: Package_for_KB3156016~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 351 in scoreboard slot 10
+
+info,jk2_init() Found child 3747 in scoreboard slot 8
+
+info,Received block blk_-8241093737585222406 of size 67108864 from /10.250.5.161
+
+warning,10.251.39.179:50010:Got exception while serving blk_1683075246463470765 to /10.250.14.38:
+
+info,"Read out cached package applicability for package: Package_for_KB2742599~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546174_132984613 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 1313 in scoreboard slot 6
+
+info,Received block blk_6329639726609402522 of size 67108864 from /10.251.107.19
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546354_3217316200 initialized by client WindowsUpdateAgent.
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 5923 in scoreboard slot 6
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Deleting block blk_8384967715738359346 file /mnt/hadoop/dfs/data/current/subdir27/blk_8384967715738359346
+
+info,Session: 30546174_107383149 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 32572 in scoreboard slot 10
+
+info,Session: 30546174_100742769 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 1800 in scoreboard slot 10
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Received block blk_6406847509870023726 of size 67108864 from /10.251.106.50
+
+info,BLOCK* NameSystem.delete: blk_-323838382557775734 is added to invalidSet of 10.251.202.209:50010
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.26.177:50010 is added to blk_-2402036602753320612 size 67108864
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 32669 in scoreboard slot 8
+
+info,jk2_init() Found child 32391 in scoreboard slot 10
+
+info,Verification succeeded for blk_1649162819905816843
+
+info,Session: 30546174_88482067 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 1901 in scoreboard slot 6
+
+info,jk2_init() Found child 8573 in scoreboard slot 10
+
+info,jk2_init() Found child 1276 in scoreboard slot 9
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 6765 in scoreboard slot 8
+
+info,"Read out cached package applicability for package: Package_for_KB2676562~31bf3856ad364e35~amd64~~6.1.1.3, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546354_2984902907 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* ask 10.250.18.114:50010 to delete  blk_-5140072410813878235
+
+critical,mod_jk child workerEnv in error state 6
+
+info,"Read out cached package applicability for package: Package_for_KB3020387~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 80, CurrentState:0"
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.delete: blk_-424018194735922479 is added to invalidSet of 10.251.42.84:50010
+
+info,PacketResponder 2 for block blk_8422946850755720617 terminating
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Receiving block blk_-2901266958756042716 src: /10.251.110.160:35787 dest: /10.251.110.160:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,"Read out cached package applicability for package: Package_for_KB2632503~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:0"
+
+warning,10.251.197.226:50010:Got exception while serving blk_2101007907134483259 to /10.251.31.242:
+
+info,Session: 30546174_91422236 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546354_3227386776 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3092627~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546354_3273319404 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.91.229:50010 is added to blk_-4651707530079874243 size 67108864
+
+info,jk2_init() Found child 1334 in scoreboard slot 8
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.130:50010 is added to blk_4568434182693165548 size 67108864
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 5845 in scoreboard slot 7
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Session: 30546354_3183554269 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 7
+
+info,jk2_init() Found child 6718 in scoreboard slot 8
+
+info,BLOCK* NameSystem.delete: blk_247452006316846355 is added to invalidSet of 10.250.6.191:50010
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Session: 30546354_3230936980 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546174_27548582 initialized by client WindowsUpdateAgent.
+
+info,Receiving block blk_-1690784932539647416 src: /10.251.31.180:50205 dest: /10.251.31.180:50010
+
+info,Deleting block blk_-1897524391075610396 file /mnt/hadoop/dfs/data/current/subdir47/blk_-1897524391075610396
+
+info,Receiving block blk_-1753161039594546561 src: /10.251.203.149:33685 dest: /10.251.203.149:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,"Read out cached package applicability for package: Package_for_KB2690533~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/randtxt/_temporary/_task_200811092030_0003_m_000675_0/part-00675. blk_-7866582011201618766
+
+info,jk2_init() Found child 32712 in scoreboard slot 6
+
+info,jk2_init() Found child 4596 in scoreboard slot 8
+
+critical,mod_jk child workerEnv in error state 10
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,mod_jk child workerEnv in error state 6
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB2544893~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 80, CurrentState:112"
+
+info,jk2_init() Found child 6569 in scoreboard slot 8
+
+info,Verification succeeded for blk_-8050165297538775793
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB2835174~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 0, CurrentState:0"
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.delete: blk_8247499802516177421 is added to invalidSet of 10.250.7.96:50010
+
+info,Session: 30546354_3343653427 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB3159398~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB3138901~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546174_90692194 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Deleting block blk_9169945668827621796 file /mnt/hadoop/dfs/data/current/subdir50/blk_9169945668827621796
+
+info,"Read out cached package applicability for package: Package_for_KB2853952~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 112, CurrentState:112"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB2834140~31bf3856ad364e35~amd64~~6.1.2.0, ApplicableState: 112, CurrentState:0"
+
+info,"Read out cached package applicability for package: Package_for_KB3035126~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 112, CurrentState:112"
+
+info,PacketResponder 2 for block blk_6918427074195439966 terminating
+
+info,"Read out cached package applicability for package: Package_for_KB3092601~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 8
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 5941 in scoreboard slot 7
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Session: 30546174_30478750 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 7
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.215.70:50010 is added to blk_-420818767915591010 size 67108864
+
+info,Deleting block blk_4365203784873840210 file /mnt/hadoop/dfs/data/current/subdir1/blk_4365203784873840210
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Received block blk_6921674711959888070 of size 67108864 from /10.251.65.203
+
+info,Receiving block blk_6563909003697001371 src: /10.251.39.144:48872 dest: /10.251.39.144:50010
+
+info,10.251.106.50:50010 Served block blk_-8907436477337775860 to /10.251.106.50
+
+info,PacketResponder 0 for block blk_-1250775350296476256 terminating
+
+info,Received block blk_-4067446915270471579 of size 25933924 from /10.251.110.8
+
+info,jk2_init() Found child 6751 in scoreboard slot 10
+
+info,Deleting block blk_-4301178988618507084 file /mnt/hadoop/dfs/data/current/subdir46/blk_-4301178988618507084
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Reboot mark refs: 0
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 2083 in scoreboard slot 8
+
+info,jk2_init() Found child 5935 in scoreboard slot 9
+
+info,Session: 30546354_3175093786 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.delete: blk_413552235254424009 is added to invalidSet of 10.251.35.1:50010
+
+info,Receiving block blk_-5145508449157510071 src: /10.251.203.246:48508 dest: /10.251.203.246:50010
+
+non-critical,Failed to internally open package. [HRESULT = 0x800f0805 - CBS_E_INVALID_PACKAGE]
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB2836943~31bf3856ad364e35~amd64~~6.1.2.0, ApplicableState: 80, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Session: 30546174_169636709 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546354_3336883039 initialized by client WindowsUpdateAgent.
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 1449 in scoreboard slot 10
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Receiving block blk_3846795603907041885 src: /10.250.10.176:47296 dest: /10.250.10.176:50010
+
+info,BLOCK* NameSystem.delete: blk_4438674026376140804 is added to invalidSet of 10.251.106.50:50010
+
+info,jk2_init() Found child 1518 in scoreboard slot 6
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 2042 in scoreboard slot 8
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Received block blk_6686361711974377273 of size 3554889 from /10.251.214.130
+
+info,10.251.91.84:50010 Served block blk_-8915491531889006304 to /10.251.91.84
+
+info,jk2_init() Found child 32453 in scoreboard slot 8
+
+info,"Read out cached package applicability for package: Package_for_KB2835174~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 0, CurrentState:0"
+
+info,jk2_init() Found child 5915 in scoreboard slot 6
+
+info,jk2_init() Found child 5049 in scoreboard slot 7
+
+info,NonStart: Checking to ensure startup processing was not required.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.203.246:50010 is added to blk_-6909400912794057067 size 67108864
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB3139914~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.delete: blk_4640277741339926850 is added to invalidSet of 10.251.26.131:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 5995 in scoreboard slot 7
+
+info,Receiving block blk_8692428775973608797 src: /10.250.10.213:56574 dest: /10.250.10.213:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Deleting block blk_-1312981516354612257 file /mnt/hadoop/dfs/data/current/subdir29/blk_-1312981516354612257
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/sortrand2/_temporary/_task_200811101024_0003_r_000344_0/part-00344. blk_-2004529166303428909
+
+info,jk2_init() Found child 6745 in scoreboard slot 8
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 32457 in scoreboard slot 6
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.65.203:50010 is added to blk_8005746184358076390 size 67108864
+
+critical,mod_jk child workerEnv in error state 7
+
+info,jk2_init() Found child 6350 in scoreboard slot 7
+
+info,jk2_init() Found child 2855 in scoreboard slot 8
+
+info,jk2_init() Found child 1297 in scoreboard slot 7
+
+warning,10.251.70.211:50010:Got exception while serving blk_424255210146453297 to /10.251.203.179:
+
+info,Received block blk_120277101968534224 of size 67108864 from /10.251.122.65
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 5789 in scoreboard slot 6
+
+info,Receiving block blk_-4365612131648152536 src: /10.251.107.227:57736 dest: /10.251.107.227:50010
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.126.5:50010 is added to blk_4361294871479973840 size 67108864
+
+info,"Read out cached package applicability for package: Package_for_KB2818604~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:0"
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,Session: 30546174_180377324 initialized by client WindowsUpdateAgent.
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.delete: blk_-765820154946060546 is added to invalidSet of 10.251.65.203:50010
+
+info,Received block blk_7463248820468902190 of size 67108864 from /10.251.91.15
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 5418 in scoreboard slot 6
+
+info,Verification succeeded for blk_1584196996810164915
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.15.101:50010 is added to blk_-6540455811923725840 size 67108864
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB3006625~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB2750841~31bf3856ad364e35~amd64~~6.1.1.3, ApplicableState: 112, CurrentState:112"
+
+info,jk2_init() Found child 6452 in scoreboard slot 8
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand3/_temporary/_task_200811101024_0005_m_000720_0/part-00720. blk_-7988596544606686086
+
+info,BLOCK* NameSystem.delete: blk_5580254744888391593 is added to invalidSet of 10.251.201.204:50010
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Receiving block blk_-2506231977021079951 src: /10.251.31.160:57634 dest: /10.251.31.160:50010
+
+info,BLOCK* NameSystem.delete: blk_8155177385081669900 is added to invalidSet of 10.251.197.161:50010
+
+info,jk2_init() Found child 1899 in scoreboard slot 7
+
+info,BLOCK* NameSystem.delete: blk_1043487525777829194 is added to invalidSet of 10.251.110.8:50010
+
+info,PacketResponder 1 for block blk_-4799092443170733505 terminating
+
+info,Received block blk_4588471931728384541 of size 67108864 from /10.251.90.81
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.228:50010 is added to blk_-1305222006484630743 size 67108864
+
+info,jk2_init() Found child 5826 in scoreboard slot 6
+
+info,jk2_init() Found child 5960 in scoreboard slot 9
+
+info,Session: 30546354_3229346889 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 32582 in scoreboard slot 10
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,mod_jk child init 1 -2
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/randtxt/_temporary/_task_200811092030_0003_m_001095_0/part-01095. blk_-7413910507260978729
+
+info,Session: 30546174_17007979 initialized by client WindowsUpdateAgent.
+
+info,Received block blk_4031738712701565209 of size 67108864 from /10.251.199.150
+
+critical,mod_jk child workerEnv in error state 6
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 32576 in scoreboard slot 7
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Received block blk_-954856062493437881 of size 67108864 from /10.251.106.10
+
+info,jk2_init() Found child 1412 in scoreboard slot 10
+
+info,Session: 30546174_99252683 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 7
+
+info,jk2_init() Found child 32638 in scoreboard slot 9
+
+info,Received block blk_-5970165518655489569 of size 67108864 from /10.250.14.196
+
+info,BLOCK* NameSystem.delete: blk_-6056336045486998577 is added to invalidSet of 10.251.126.255:50010
+
+info,BLOCK* NameSystem.delete: blk_-4702684774678057084 is added to invalidSet of 10.250.13.240:50010
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546174_84291828 initialized by client WindowsUpdateAgent.
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546173_4286853838 initialized by client WindowsUpdateAgent.
+
+info,"NonStart: Success, startup processing not required as expected."
+
+info,Session: 30546173_4281313522 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546354_3220876404 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546174_100772770 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.111.209:50010 is added to blk_4069436988023676023 size 67108864
+
+info,jk2_init() Found child 4986 in scoreboard slot 8
+
+info,"Read out cached package applicability for package: Package_for_KB3121255~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB3006137~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,jk2_init() Found child 8536 in scoreboard slot 6
+
+info,jk2_init() Found child 5417 in scoreboard slot 9
+
+info,jk2_init() Found child 4617 in scoreboard slot 7
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand4/_temporary/_task_200811101024_0009_m_000176_0/part-00176. blk_8924207394547472950
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/sortrand2/_temporary/_task_200811101024_0003_r_000315_0/part-00315. blk_-463998587096565542
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Loaded Servicing Stack v6.1.7601.23505 with Core: C:\Windows\winsxs\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_6.1.7601.23505_none_681aa442f6fed7f0\cbscore.dll
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 7
+
+info,jk2_init() Found child 6011 in scoreboard slot 7
+
+info,"Read out cached package applicability for package: Package_for_KB2563227~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB3182203~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,Session: 30546354_2955431222 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+warning,10.251.31.5:50010:Got exception while serving blk_-1367876730256254709 to /10.251.67.225:
+
+info,jk2_init() Found child 32674 in scoreboard slot 8
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,"Read out cached package applicability for package: Package_for_KB2620704~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,"Read out cached package applicability for package: Package_for_KB2653956~31bf3856ad364e35~amd64~~6.1.1.5, ApplicableState: 80, CurrentState:112"
+
+info,Received block blk_566413670355737377 of size 67108864 from /10.251.122.79
+
+info,Received block blk_-1201318815778694289 of size 67108864 from /10.251.194.147
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,"Read out cached package applicability for package: Package_for_KB2621440~31bf3856ad364e35~amd64~~6.1.1.5, ApplicableState: 112, CurrentState:112"
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,"Read out cached package applicability for package: Package_for_KB3004361~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 32561 in scoreboard slot 8
+
+critical,[client 218.62.18.218] Directory index forbidden by rule: /var/www/html/
+
+info,"Read out cached package applicability for package: Package_for_KB3020388~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546354_3297200770 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Session: 30546174_99222682 initialized by client WindowsUpdateAgent.
+
+info,Received block blk_-3300851862683571086 of size 67108864 from /10.251.203.166
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.30.179:50010 is added to blk_4628142183191390143 size 67108864
+
+info,Session: 30546173_4268042763 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.10.6:50010 is added to blk_8527562124953828227 size 67108864
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.66.3:50010 is added to blk_6547729596040509998 size 67108864
+
+info,Deleting block blk_7985460426680885040 file /mnt/hadoop/dfs/data/current/blk_7985460426680885040
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.7.230:50010 is added to blk_6238543795209416553 size 67108864
+
+info,jk2_init() Found child 5938 in scoreboard slot 8
+
+info,PacketResponder 2 for block blk_-9110604833387121363 terminating
+
+info,Deleting block blk_-6891122177443047531 file /mnt/hadoop/dfs/data/current/subdir36/blk_-6891122177443047531
+
+info,"Read out cached package applicability for package: Package_for_KB2809215~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:0"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.90.239:50010 is added to blk_-2281067667503210140 size 67108864
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.106.37:50010 is added to blk_-4741127506068309449 size 67108864
+
+info,jk2_init() Found child 5825 in scoreboard slot 9
+
+info,jk2_init() Found child 8527 in scoreboard slot 10
+
+info,jk2_init() Found child 8554 in scoreboard slot 6
+
+info,PacketResponder 1 for block blk_871974742726663441 terminating
+
+info,Received block blk_-1849105860762445186 of size 67108864 from /10.251.91.229
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB3147071~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.30.6:50010 is added to blk_-2345355483730155757 size 67108864
+
+info,"Read out cached package applicability for package: Package_for_KB3087039~31bf3856ad364e35~amd64~~6.1.1.4, ApplicableState: 80, CurrentState:112"
+
+critical,jk2_init() Can't find child 2086 in scoreboard
+
+info,"Read out cached package applicability for package: Package_for_KB2992611~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+critical,mod_jk child workerEnv in error state 6
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,mod_jk child workerEnv in error state 7
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Deleting block blk_4632283243694149854 file /mnt/hadoop/dfs/data/current/subdir40/blk_4632283243694149854
+
+info,Received block blk_-5124326558394984439 of size 67108864 from /10.251.122.79
+
+info,"Read out cached package applicability for package: Package_for_KB2923545~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,jk2_init() Found child 4976 in scoreboard slot 7
+
+info,Received block blk_2270593866672608129 of size 67108864 from /10.250.11.53
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 32720 in scoreboard slot 8
+
+info,jk2_init() Found child 6055 in scoreboard slot 8
+
+info,jk2_init() Found child 6285 in scoreboard slot 8
+
+info,jk2_init() Found child 1461 in scoreboard slot 8
+
+info,Session: 30546354_2936720151 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546354_3225896691 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 5434 in scoreboard slot 6
+
+info,Session: 30546354_2988103090 initialized by client WindowsUpdateAgent.
+
+info,"Read out cached package applicability for package: Package_for_KB2601626~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 0, CurrentState:0"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Session: 30546174_155605907 initialized by client WindowsUpdateAgent.
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Session: 30546354_3203755425 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 6
+
+info,10.251.71.97:50010 Served block blk_6552418180158772377 to /10.251.39.242
+
+info,jk2_init() Found child 6453 in scoreboard slot 10
+
+info,Receiving block blk_-764747190320632607 src: /10.251.127.191:49914 dest: /10.251.127.191:50010
+
+info,"Read out cached package applicability for package: Package_for_KB2732059~31bf3856ad364e35~amd64~~6.1.5.1, ApplicableState: 112, CurrentState:112"
+
+info,Deleting block blk_6542592144596063478 file /mnt/hadoop/dfs/data/current/subdir35/blk_6542592144596063478
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.71.146:50010 is added to blk_-6836642008179678048 size 67108864
+
+info,jk2_init() Found child 2865 in scoreboard slot 9
+
+info,Session: 30546354_3298800861 initialized by client WindowsUpdateAgent.
+
+info,Deleting block blk_6497260538939100482 file /mnt/hadoop/dfs/data/current/subdir46/blk_6497260538939100482
+
+info,Deleting block blk_-1535908830476495455 file /mnt/hadoop/dfs/data/current/subdir10/blk_-1535908830476495455
+
+info,jk2_init() Found child 2880 in scoreboard slot 8
+
+info,BLOCK* NameSystem.delete: blk_-6068451475575444798 is added to invalidSet of 10.251.43.210:50010
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 6
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand4/_temporary/_task_200811101024_0009_m_001611_0/part-01611. blk_285336326661214154
+
+info,10.250.14.38:50010 Served block blk_-8674089929114017279 to /10.250.14.38
+
+info,BLOCK* NameSystem.delete: blk_-1227720343537039835 is added to invalidSet of 10.251.202.134:50010
+
+info,Session: 30546354_3217556214 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 32433 in scoreboard slot 8
+
+info,PacketResponder 0 for block blk_4575129504644372394 terminating
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.89.155:50010 is added to blk_8181993091797661153 size 67108864
+
+info,"Read out cached package applicability for package: Package_for_KB2685811~31bf3856ad364e35~amd64~~6.1.1.11, ApplicableState: 112, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB3175024~31bf3856ad364e35~amd64~~6.1.2.0, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.203.149:50010 is added to blk_-6247364168500873179 size 67108864
+
+info,jk2_init() Found child 32432 in scoreboard slot 7
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.65.203:50010 is added to blk_-3949633496933134307 size 67108864
+
+info,PacketResponder 2 for block blk_-4325209272072286951 terminating
+
+info,jk2_init() Found child 5495 in scoreboard slot 9
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,jk2_init() Found child 5048 in scoreboard slot 6
+
+info,jk2_init() Found child 32480 in scoreboard slot 8
+
+info,"Read out cached package applicability for package: Package_for_KB3005607~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 80, CurrentState:112"
+
+info,jk2_init() Found child 4962 in scoreboard slot 7
+
+info,Session: 30546174_179777289 initialized by client WindowsUpdateAgent.
+
+critical,mod_jk child workerEnv in error state 6
+
+info,PacketResponder 2 for block blk_-2466006073687914843 terminating
+
+info,Received block blk_-6966935672736779591 of size 67108864 from /10.251.90.64
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB3121461~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 80, CurrentState:112"
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546174_92052272 initialized by client WindowsUpdateAgent.
+
+info,PacketResponder 0 for block blk_-41928108292416895 terminating
+
+info,jk2_init() Found child 1476 in scoreboard slot 8
+
+info,Session: 30546354_3218366261 initialized by client WindowsUpdateAgent.
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.73.220:50010 is added to blk_1303107722036031233 size 67108864
+
+info,jk2_init() Found child 6733 in scoreboard slot 8
+
+info,jk2_init() Found child 1998 in scoreboard slot 9
+
+info,Session: 30546173_4280603481 initialized by client WindowsUpdateAgent.
+
+info,Receiving block blk_-7418372263556457716 src: /10.251.89.155:53560 dest: /10.251.89.155:50010
+
+critical,mod_jk child workerEnv in error state 8
+
+info,Deleting block blk_70980361971054326 file /mnt/hadoop/dfs/data/current/subdir27/blk_70980361971054326
+
+info,Deleting block blk_-2808875502459981198 file /mnt/hadoop/dfs/data/current/subdir3/blk_-2808875502459981198
+
+critical,mod_jk child workerEnv in error state 6
+
+info,jk2_init() Found child 1963 in scoreboard slot 9
+
+info,jk2_init() Found child 32709 in scoreboard slot 8
+
+critical,[client 67.166.248.235] Directory index forbidden by rule: /var/www/html/
+
+info,"Read out cached package applicability for package: Package_for_KB2931356~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Deleting block blk_6223504502438507199 file /mnt/hadoop/dfs/data/current/subdir0/blk_6223504502438507199
+
+info,Session: 30546174_177417154 initialized by client WindowsUpdateAgent.
+
+info,Deleting block blk_3733339790842827121 file /mnt/hadoop/dfs/data/current/subdir42/blk_3733339790842827121
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Session: 30546354_3225636676 initialized by client WindowsUpdateAgent.
+
+info,Session: 30546174_20518180 initialized by client WindowsUpdateAgent.
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+critical,mod_jk child workerEnv in error state 7
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 3678 in scoreboard slot 8
+
+info,PacketResponder 2 for block blk_8487226415276391460 terminating
+
+info,"Read out cached package applicability for package: Package_for_KB3059317~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Deleting block blk_-4844505495441326897 file /mnt/hadoop/dfs/data/current/subdir36/blk_-4844505495441326897
+
+info,BLOCK* NameSystem.delete: blk_7541621664406141215 is added to invalidSet of 10.251.214.32:50010
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.73.220:50010 is added to blk_578261619176233743 size 67108864
+
+info,BLOCK* NameSystem.delete: blk_3637945019239882309 is added to invalidSet of 10.251.198.196:50010
+
+info,PacketResponder 1 for block blk_5017373558217225674 terminating
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Received block blk_7589872946955471867 of size 67108864 from /10.251.195.70
+
+info,PacketResponder 1 for block blk_5114572025256210948 terminating
+
+warning,Warning: Unrecognized packageExtended attribute.
+
+info,jk2_init() Found child 5006 in scoreboard slot 8
+
+info,Session: 30546354_3176343857 initialized by client WindowsUpdateAgent.
+
+info,jk2_init() Found child 6638 in scoreboard slot 8
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,Received block blk_-2856928563366064757 of size 67108864 from /10.251.42.9
+
+info,Received block blk_9103049989653819836 of size 67108864 from /10.250.10.223
+
+info,jk2_init() Found child 32637 in scoreboard slot 7
+
+info,jk2_init() Found child 5023 in scoreboard slot 7
+
+info,Receiving block blk_-4473020641607592551 src: /10.251.42.191:48114 dest: /10.251.42.191:50010
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/rand4/_temporary/_task_200811101024_0009_m_001398_0/part-01398. blk_-7527506469734664572
+
+info,"Read out cached package applicability for package: Package_for_KB2931356~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,Received block blk_-7152190882826520998 of size 67108864 from /10.250.14.143
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,Received block blk_7872746846750105239 of size 67108864 from /10.251.43.21
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,jk2_init() Found child 3753 in scoreboard slot 10
+
+info,"Read out cached package applicability for package: Package_for_KB2727528~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+non-critical,Failed to get next element [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,10.251.39.144:50010 Served block blk_-8187008844253719581 to /10.251.91.32
+
+info,BLOCK* NameSystem.delete: blk_1979447750586388860 is added to invalidSet of 10.251.215.192:50010
+
+info,Receiving block blk_2166777223671724319 src: /10.251.214.175:52741 dest: /10.251.214.175:50010
+
+critical,mod_jk child workerEnv in error state 6
+
+info,Received block blk_-2935178173527646581 of size 67108864 from /10.251.65.237
+
+info,Receiving block blk_7061131805920430446 src: /10.250.7.32:53397 dest: /10.250.7.32:50010
+
+info,Deleting block blk_-8848810702648406400 file /mnt/hadoop/dfs/data/current/subdir11/blk_-8848810702648406400
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.90.64:50010 is added to blk_1441315972355360459 size 67108864
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+critical,mod_jk child workerEnv in error state 7
+
+info,Deleting block blk_-2929627680703662712 file /mnt/hadoop/dfs/data/current/subdir32/blk_-2929627680703662712
+
+info,Session: 30546174_176917126 initialized by client WindowsUpdateAgent.
+
+info,Receiving block blk_4238127626194855481 src: /10.250.11.100:59324 dest: /10.250.11.100:50010
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.250.7.96:50010 is added to blk_4553790855855864497 size 67108864
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+info,"Read out cached package applicability for package: Package_for_KB2972100~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,PacketResponder 2 for block blk_1077394056781488 terminating
+
+info,PacketResponder 0 for block blk_-9198375937828232046 terminating
+
+non-critical,Expecting attribute name [HRESULT = 0x800f080d - CBS_E_MANIFEST_INVALID_ITEM]
+
+info,BLOCK* NameSystem.delete: blk_-2025578204394955498 is added to invalidSet of 10.251.91.159:50010
+
+info,"Read out cached package applicability for package: Package_for_KB3006121~31bf3856ad364e35~amd64~~6.1.1.0, ApplicableState: 112, CurrentState:112"
+
+info,workerEnv.init() ok /etc/httpd/conf/workers2.properties
+
+warning,10.251.42.191:50010:Got exception while serving blk_-8023826090828946372 to /10.251.214.130:
+
+info,BLOCK* NameSystem.allocateBlock: /user/root/randtxt9/_temporary/_task_200811101024_0016_m_000347_0/part-00347. blk_-8426741581316629266
+
+info,jk2_init() Found child 1565 in scoreboard slot 9
+
+info,Deleting block blk_-9169228974826183399 file /mnt/hadoop/dfs/data/current/subdir5/blk_-9169228974826183399
+
+info,Received block blk_4989329877491629543 of size 67108864 from /10.250.15.67
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.39.144:50010 is added to blk_1526403491950199810 size 3534443
+
+info,"Read out cached package applicability for package: Package_for_KB2884256~31bf3856ad364e35~amd64~~6.1.1.1, ApplicableState: 112, CurrentState:112"
+
+info,"Read out cached package applicability for package: Package_for_KB2871997~31bf3856ad364e35~amd64~~6.1.2.5, ApplicableState: 112, CurrentState:112"
+
+info,Deleting block blk_-2098161025946048013 file /mnt/hadoop/dfs/data/current/subdir17/blk_-2098161025946048013
+
+info,Deleting block blk_8598135237831029828 file /mnt/hadoop/dfs/data/current/subdir59/blk_8598135237831029828
+
+info,"Read out cached package applicability for package: Package_for_KB2807986~31bf3856ad364e35~amd64~~6.1.1.2, ApplicableState: 112, CurrentState:112"
+
+info,BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.39.144:50010 is added to blk_-6592952246351162022 size 67108864
+
+critical,"FATAL: Unable to connect to the PostgreSQL database due to timeout while trying to reach the server at 192.0.2.1."
+
+non-critical,"INFO: User 'admin' successfully logged in from IP address 203.0.113.5, timestamp: 2024-10-19 10:15:32."
+
+info,"DEBUG: Initializing application with configuration settings loaded from config.yaml, version 1.2.3."
+
+critical,"ERROR: Disk space quota exceeded for user 'testuser' in the home directory, please clean up some files."
+
+non-critical,"WARNING: Process ID 5678 is consuming excessive memory, currently using 2.5 GB, exceeding the expected threshold."
+
+info,"INFO: Package 'requests' was installed successfully, and is now available for use in the Python environment."
+
+critical,"CRITICAL: Out of memory exception occurred in the Python application while processing user data, terminating process."
+
+non-critical,"NOTICE: System update completed without any errors, all packages are now up to date as of 2024-10-19."
+
+info,"INFO: Server started successfully and is listening for incoming connections on port 8080, ready to serve requests."
+
+critical,"ERROR: Failed to authenticate user with API token, token may be invalid or expired, please check your credentials."
+
+non-critical,"WARNING: The deprecated function 'calculate()' will be removed in the next release; please update your code."
+
+info,"INFO: Scheduled backup completed successfully at 02:00 AM, backup size was 1.2 GB, no issues encountered."
+
+critical,"CRITICAL: SQL injection attempt detected in login request from user 'guest', immediate action is required."
+
+non-critical,"NOTICE: Disk space usage is currently at 85%, consider freeing up space to avoid service disruptions."
+
+info,"DEBUG: Fetching user details from the external API for user ID 12345, processing time may vary."
+
+critical,"FATAL: Unable to load configuration file: settings.ini, please ensure the file exists and is accessible."
+
+non-critical,"INFO: User 'guest' attempted login with invalid credentials at 2024-10-19 10:20:45, login failed."
+
+info,"INFO: Apache server is running and listening on port 80 without any issues, uptime: 72 hours."
+
+critical,"ERROR: File not found: /var/log/somefile.log, ensure the file path is correct and the application has access."
+
+non-critical,"WARNING: High memory usage detected for process ID 1234, currently using 85% of available resources."
+
+info,"INFO: Application deployed successfully to production environment without any deployment errors."
+
+critical,"FATAL: Unhandled exception in main thread, the application will terminate unexpectedly."
+
+non-critical,"NOTICE: All scheduled tasks have completed successfully as of 2024-10-19 10:30:00."
+
+info,"INFO: User 'john_doe' updated their profile successfully at 2024-10-19 10:35:21."
+
+critical,"ERROR: Failed to send email notification to user due to SMTP server unavailability."
+
+non-critical,"WARNING: Low battery warning on device, please connect to a power source soon."
+
+info,"INFO: Fetching the latest updates from the server, please wait a moment."
+
+critical,"CRITICAL: Exception occurred: Stack overflow detected in processing module during execution."
+
+non-critical,"INFO: User 'testuser' logged out successfully at 2024-10-19 10:40:00."
+
+info,"INFO: Service health check passed without any issues, all systems operational."
+
+critical,"ERROR: Permission denied while accessing critical system file: /etc/passwd, check your user permissions."
+
+non-critical,"WARNING: Scheduled task missed execution time at 03:00 AM, will attempt to rerun at next scheduled interval."
+
+info,"INFO: User 'admin' has been granted additional permissions for administrative tasks."
+
+critical,"CRITICAL: Resource allocation failed for application, unable to allocate necessary memory."
+
+non-critical,"NOTICE: System configuration has been changed, review changes in configuration log."
+
+info,"DEBUG: Initializing network services and connections, please wait for the process to complete."
+
+critical,"ERROR: Failed to bind to port 443 due to another service already using it."
+
+non-critical,"WARNING: Configuration file has syntax errors that need to be resolved before continuing."
+
+info,"INFO: New user registered successfully at 2024-10-19 10:50:00, welcome email has been sent."
+
+critical,"FATAL: Memory allocation failure during data processing, unable to continue operation."
+
+non-critical,"INFO: Cleanup process initiated for temporary files older than 30 days."
+
+info,"INFO: Remote connection established with the server at IP 192.0.2.2."
+
+critical,"ERROR: Invalid input received from user, please check the input format and try again."
+
+non-critical,"NOTICE: Performance metrics have been updated to reflect the latest data."
+
+info,"DEBUG: Starting background tasks for data processing, expect completion in approximately 5 minutes."
+
+critical,"CRITICAL: Unable to recover from a critical system error, immediate intervention is required."
+
+non-critical,"WARNING: Possible SQL injection attempt detected in user input, review logs for details."
+
+info,"INFO: User preferences have been loaded successfully from the database."
+
+critical,"FATAL: Missing required libraries for application startup, installation is necessary to proceed."
+
+non-critical,"INFO: Session token has been refreshed and is valid for the next 60 minutes."
+
+info,"INFO: Log file size has exceeded 10MB, automatic rotation will occur at midnight."
+
+critical,"ERROR: Network configuration error detected, check your settings and try again."
+
+non-critical,"WARNING: Unstable network connection reported, intermittent connectivity may affect performance."
+
+info,"INFO: Successfully connected to the database server at 192.0.2.3."
+
+critical,"CRITICAL: Major system integrity failure detected, please contact technical support immediately."
+
+non-critical,"NOTICE: User 'alice' updated her profile settings successfully."
+
+info,"DEBUG: Processing incoming file uploads, estimated time: 10 seconds."
+
+critical,"ERROR: Cannot execute script due to insufficient permissions for the requested operation."
+
+non-critical,"WARNING: Disk usage has exceeded the threshold of 90%, consider cleaning up old files."
+
+info,"INFO: Service started successfully after reboot, all systems are operational."
+
+critical,"FATAL: Unable to initialize graphics driver due to missing components."
+
+non-critical,"INFO: User 'bob' has successfully changed their password."
+
+info,"INFO: System clock has been synchronized with the network time server."
+
+critical,"CRITICAL: Fatal error during system boot sequence, check the system logs for more information."
+
+non-critical,"NOTICE: Temporary file cleanup completed successfully, reclaimed 500 MB of disk space."
+
+info,"DEBUG: Loading modules for data processing, please wait while modules are initialized."
+
+critical,"ERROR: System crash due to null pointer exception, a reboot is required to continue."
+
+non-critical,"WARNING: License key will expire in 15 days, renewal is recommended."
+
+info,"INFO: New software version is available for download, version 2.1.0 includes critical updates."
+
+critical,"FATAL: Unable to connect to LDAP server, authentication services may be affected."
+
+non-critical,"INFO: User 'carol' logged in from a new device successfully."
+
+info,"INFO: Data synchronization with the server has completed without issues."
+
+critical,"CRITICAL: Failed to retrieve data from the external API, service may be unavailable."
+
+non-critical,"NOTICE: Weekly maintenance window scheduled for Sunday at 02:00 AM."
+
+info,"DEBUG: Starting application with debug mode enabled, verbose logging is activated."
+
+critical,"ERROR: Authentication failure for user 'dave', invalid username or password."
+
+non-critical,"WARNING: CPU usage has been consistently high, check running processes."
+
+info,"INFO: Scheduled report generation completed successfully with no errors."
+
+critical,"Apache server failed to start due to configuration error in /etc/httpd/conf/httpd.conf"
+
+non-critical,"User 'john_doe' attempted to access restricted area without proper permissions"
+
+info,"Database connection established successfully at 2024-10-19 08:45:12"
+
+critical,"Kernel panic - not syncing: Fatal exception in interrupt"
+
+info,"Python script executed with arguments: --input data.csv --output result.json"
+
+non-critical,"Disk space usage has exceeded 80% on /dev/sda1"
+
+info,"Service 'nginx' is running with PID 1234"
+
+critical,"Failed to authenticate user 'admin' after 5 attempts"
+
+info,"Java application started successfully on port 8080"
+
+non-critical,"Backup completed successfully at 2024-10-19 02:00:00"
+
+critical,"Memory leak detected in process ID 5678, terminating process"
+
+info,"New package 'curl' installed successfully via apt-get"
+
+non-critical,"User 'alice' logged out at 2024-10-19 09:15:00"
+
+critical,"SQL injection attempt detected on endpoint /api/user/login"
+
+info,"System reboot scheduled for 2024-10-20 at 03:00 AM"
+
+non-critical,"Network latency increased to 200ms for server 'db01'"
+
+critical,"File '/etc/passwd' has been modified unexpectedly"
+
+info,"Docker container 'web_app' is up and running"
+
+non-critical,"SSH login from unknown IP address detected, alerting administrator"
+
+critical,"Data corruption detected in database table 'users'"
+
+info,"Scheduled maintenance completed successfully on server 'app01'"
+
+non-critical,"Service 'cron' executed job successfully at 04:30 AM"
+
+critical,"Unauthorized access attempt detected on server 'mail01'"
+
+info,"Python virtual environment 'venv' activated successfully"
+
+non-critical,"System load average exceeded threshold of 5.0 for more than 5 minutes"
+
+critical,"Critical vulnerability found in package 'openssl', immediate update required"
+
+info,"User 'bob' created a new project in the system at 2024-10-19 10:00:00"
+
+non-critical,"Temporary file cleanup completed, removed 150 files older than 30 days"
+
+critical,"Unexpected shutdown of service 'database', restarting now..."
+
+info,"API request received from client IP: 192.168.1.100 at timestamp: 2024-10-19T11:00:00Z"
+
+non-critical,"User 'charlie' updated their profile information successfully"
+
+critical,"Service 'web_server' crashed due to out of memory error"
+
+info,"Scheduled task ran successfully, processed 500 records."
+
+non-critical,"Log rotation completed for file '/var/log/syslog'"
+
+critical,"File system error detected on '/dev/sdb', running fsck..."
+
+info,"New user registered with email 'newuser@example.com'"
+
+non-critical,"Service response time exceeded threshold, taking longer than expected."
+
+critical,"Intrusion detection system triggered due to multiple failed login attempts."
+
+info,"Application version updated from v1.2.3 to v1.2.4."
+
+non-critical,"Email sent to user regarding password reset request."
+
+critical,"Backup failure reported for database 'production_db', check logs for details."
+
+info,"User 'dave' accessed report 'Sales_Q3_2024.pdf'."
+
+non-critical,"API rate limit reached for user ID: 12345."
+
+critical,"Service outage reported for application 'payment_gateway'."
+
+info,"System health check passed with no issues detected."
+
+non-critical,"User session expired after inactivity of 30 minutes."
+
+critical,"Malware detected on server, initiating quarantine procedure."
+
+info,"Configuration changes applied successfully to server settings."
+
+non-critical,"Temporary network outage experienced, now resolved."
+
+critical,"Data breach reported, sensitive information may have been exposed."
+
+info,"User 'eve' logged in from device type: mobile."
+
+non-critical,"File upload completed successfully for user 'frank'."
+
+critical,"Critical system error encountered while processing request ID: #4567."
+
+info,"Scheduled report generated and emailed to management."
+
+non-critical,"Cache cleared for application 'frontend'."
+
+critical,"Service dependency failure detected, unable to start service 'api'."
+
+info,"New SSL certificate installed and activated successfully."
+
+non-critical,"User feedback submitted through the application interface."
+
+critical,"Database connection timeout occurred while accessing table 'orders'."
+
+info,"System uptime recorded at 100 days without reboot."
+
+non-critical,"Firewall rules updated to allow traffic on port 443."
+
+critical,"Unexpected termination of process ID 8901, investigating cause..."
+
+info,"Data synchronization completed between local and remote servers."
+
+non-critical,"System performance metrics collected and stored for analysis."
+
+critical,"High CPU usage detected on server, exceeding safe limits."
+
+info,"Backup verification completed with no errors found."
+
+non-critical,"User password changed successfully at timestamp: 2024-10-19T12:30:00Z."
+
+critical,"Critical failure in RAID array, immediate action required!"
+
+info,"New software update available for installation on server."
+
+non-critical,"Session token expired; user needs to log in again."
+
+critical,"Unauthorized data access attempt logged from external IP address."
+
+info,"Log file size has reached limit; archiving old logs now..."
+
+non-critical,"Network bandwidth usage is currently at normal levels."
+
+critical,"Service crash report generated; reviewing stack trace for errors."
+
+info,"Configuration file '/etc/nginx/nginx.conf’ loaded successfully."
+
+critical,"Apache server failed to start due to a misconfiguration in the virtual host settings located in /etc/httpd/conf.d/vhosts.conf"
+
+non-critical,"User 'jane_doe' attempted to access the admin panel without proper authorization at 2024-10-19 08:15:45"
+
+info,"Database connection established successfully to 'production_db' at 2024-10-19 09:00:00"
+
+critical,"Kernel panic - not syncing: Fatal exception in interrupt handler detected on CPU 0"
+
+info,"Python script 'data_processor.py' executed with parameters: --input data.csv --output results.json"
+
+non-critical,"Disk usage on '/dev/sda1' has reached 85%, consider cleaning up old files."
+
+critical,"Failed to authenticate user 'admin' after multiple unsuccessful login attempts from IP 192.168.1.50"
+
+info,"Java application 'InventoryManager' started successfully on port 8080 at 2024-10-19 10:30:00"
+
+non-critical,"Backup completed successfully for database 'sales_db' at 2024-10-19 03:00:00"
+
+critical,"Memory leak detected in process ID 1234, triggering automatic restart of the service."
+
+info,"New package 'git' installed successfully using apt-get on Ubuntu system."
+
+non-critical,"User 'alice_smith' logged out of the system at 2024-10-19 11:15:00"
+
+critical,"SQL injection attempt detected on endpoint '/api/user/login', blocking IP address for security."
+
+info,"System reboot scheduled for maintenance on server 'app01' at 2024-10-20 02:00 AM."
+
+non-critical,"Network latency increased to an average of 250ms for server 'db01', monitoring ongoing."
+
+critical,"File '/etc/passwd' has been modified unexpectedly, potential security breach detected."
+
+info,"Docker container 'web_app' is running and healthy with status code 200."
+
+non-critical,"SSH login attempt from unknown IP address (203.0.113.5) detected, alerting security team."
+
+critical,"Data corruption detected in database table 'users', initiating recovery procedures immediately."
+
+info,"Scheduled maintenance completed successfully on server 'web_server_02'."
+
+non-critical,"Service 'cron' executed job successfully at 05:30 AM, no errors reported."
+
+critical,"Unauthorized access attempt logged on server 'mail_server', immediate investigation required."
+
+info,"Python virtual environment 'venv' activated successfully for project development."
+
+non-critical,"System load average exceeded threshold of 5.0 for more than 10 minutes; investigating cause."
+
+critical,"Critical vulnerability found in package 'openssl', immediate action required to patch systems."
+
+info,"User 'bob_johnson' created a new project titled 'Q4 Marketing Strategy' at 2024-10-19 12:00:00."
+
+non-critical,"Temporary file cleanup completed; removed 200 files older than 30 days from '/tmp'."
+
+critical,"Intrusion detection system triggered due to multiple failed login attempts from external sources."
+
+info,"Application version updated from v2.3.1 to v2.3.2 without issues during deployment."
+
+non-critical,"Email notification sent to user regarding successful password reset request."
+
+critical,"Backup failure reported for database 'production_db'; check logs for detailed error messages."
+
+info,"User 'dave_williams' accessed report 'Sales_Q3_2024.pdf' at timestamp: 2024-10-19T13:15:00Z."
+
+non-critical,"API rate limit reached for user ID: 54321; throttling requests temporarily."
+
+critical,"Service outage reported for application 'payment_gateway'; immediate resolution required!"
+
+info,"System health check passed with no issues detected across all services and applications."
+
+non-critical,"User session expired due to inactivity after 20 minutes; prompting re-login."
+
+critical,"Malware detected on server; initiating quarantine procedure and alerting IT security team."
+
+info,"Configuration changes applied successfully to server settings without any errors logged."
+
+non-critical,"Network bandwidth usage is currently stable and within normal operational limits."
+
+critical,"High CPU usage detected on server; exceeding safe limits of operation; initiating scaling procedures."
+
+info,"Backup verification completed with no errors found during the process; all files accounted for."
+
+non-critical,"User password changed successfully at timestamp: 2024-10-19T14:30:00Z; confirmation sent via email."
+
+critical,"Critical failure in RAID array detected; immediate action required to prevent data loss!"
+
+info,"New SSL certificate installed and activated successfully for domain 'example.com'."
+
+non-critical,"Session token expired; user needs to re-authenticate to continue accessing resources."
+
+critical,"Unauthorized data access attempt logged from external IP address (198.51.100.25); blocking now..."
+
+info,"Log file size has reached limit; archiving old logs and compressing for storage efficiency now..."
+
+non-critical,"Network performance metrics collected and stored for future analysis and optimization efforts."
+
+critical,"Service crash report generated; reviewing stack trace for errors and potential fixes required."
+
+info,"Configuration file '/etc/nginx/nginx.conf’ loaded successfully without any syntax errors."
+
+non-critical,"User feedback submitted through the application interface regarding recent updates."
+
+critical,"Unexpected termination of process ID 6789 due to segmentation fault; analyzing core dump."
+
+info,"New user registered with email ‘newuser@example.com’ at timestamp: 2024-10-19T15:45:00Z."
+
+non-critical,"Firewall rules updated to allow traffic on port 80 for HTTP requests."
+
+critical,"Data breach reported; sensitive customer information may have been exposed during incident."
+
+info,"Log rotation completed for file '/var/log/syslog'; old logs archived successfully."
+
+non-critical,"System performance metrics collected indicate a slight increase in response times over the last week."
+
+critical,"Service dependency failure detected, unable to start service ‘api_gateway’ due to missing libraries."
+
+info,"Scheduled task ran successfully, processed a total of 750 records without issues."
+
+non-critical,"Temporary network outage experienced earlier today; service restored within minutes."
+
+critical,"Critical system error encountered while processing request ID #9876; immediate attention needed!"
+
+info,"New software update available for installation on server ‘app02’; notifying admin team."
+
+non-critical,"User session terminated due to inactivity after exceeding allowed time limit."
+
+critical,"Unauthorized access attempt logged from multiple sources; escalating incident response procedures."
+
+info,"Log file cleanup initiated; removing entries older than six months as per retention policy."
+
+non-critical,"Network latency returned to normal levels after troubleshooting efforts were implemented."
+
+critical,"Service outage reported for application ‘user_authentication’; root cause analysis underway!"
+
+info,"API request received from client IP: 192.168.1.100 at timestamp: 2024-10-19T16:15:00Z."
+
+non-critical,"User profile updated successfully with new contact information and preferences."
+
+critical,"Critical failure reported in application ‘order_processing’; immediate rollback initiated!"
+
+info,"System uptime recorded at an impressive total of 150 days without any reboot or downtime."
+
+critical,"Apache server failed to start due to a misconfiguration in the virtual host settings located in /etc/httpd/conf.d/vhosts.conf"
+
+non-critical,"User 'jane_doe' attempted to access the admin panel without proper authorization at 2024-10-19 08:15:45"
+
+info,"Database connection established successfully to 'production_db' at 2024-10-19 09:00:00"
+
+critical,"Kernel panic - not syncing: Fatal exception in interrupt handler detected on CPU 0"
+
+info,"Python script 'data_processor.py' executed with parameters: --input data.csv --output results.json"
+
+non-critical,"Disk usage on '/dev/sda1' has reached 85%, consider cleaning up old files."
+
+critical,"Failed to authenticate user 'admin' after multiple unsuccessful login attempts from IP 192.168.1.50"
+
+info,"Java application 'InventoryManager' started successfully on port 8080 at 2024-10-19 10:30:00"
+
+non-critical,"Backup completed successfully for database 'sales_db' at 2024-10-19 03:00:00"
+
+critical,"Memory leak detected in process ID 1234, triggering automatic restart of the service."
+
+info,"New package 'git' installed successfully using apt-get on Ubuntu system."
+
+non-critical,"User 'alice_smith' logged out of the system at 2024-10-19 11:15:00"
+
+critical,"SQL injection attempt detected on endpoint '/api/user/login', blocking IP address for security."
+
+info,"System reboot scheduled for maintenance on server 'app01' at 2024-10-20 02:00 AM."
+
+non-critical,"Network latency increased to an average of 250ms for server 'db01', monitoring ongoing."
+
+critical,"File '/etc/passwd' has been modified unexpectedly, potential security breach detected."
+
+info,"Docker container 'web_app' is running and healthy with status code 200."
+
+non-critical,"SSH login attempt from unknown IP address (203.0.113.5) detected, alerting security team."
+
+critical,"Data corruption detected in database table 'users', initiating recovery procedures immediately."
+
+info,"Scheduled maintenance completed successfully on server 'web_server_02'."
+
+non-critical,"Service 'cron' executed job successfully at 05:30 AM, no errors reported."
+
+critical,"Unauthorized access attempt logged on server 'mail_server', immediate investigation required."
+
+info,"Python virtual environment 'venv' activated successfully for project development."
+
+non-critical,"System load average exceeded threshold of 5.0 for more than 10 minutes; investigating cause."
+
+critical,"Critical vulnerability found in package 'openssl', immediate action required to patch systems."
+
+info,"User 'bob_johnson' created a new project titled 'Q4 Marketing Strategy' at 2024-10-19 12:00:00."
+
+non-critical,"Temporary file cleanup completed; removed 200 files older than 30 days from '/tmp'."
+
+critical,"Intrusion detection system triggered due to multiple failed login attempts from external sources."
+
+info,"Application version updated from v2.3.1 to v2.3.2 without issues during deployment."
+
+non-critical,"Email notification sent to user regarding successful password reset request."
+
+critical,"Backup failure reported for database 'production_db'; check logs for detailed error messages."
+
+info,"User 'dave_williams' accessed report 'Sales_Q3_2024.pdf' at timestamp: 2024-10-19T13:15:00Z."
+
+non-critical,"API rate limit reached for user ID: 54321; throttling requests temporarily."
+
+critical,"Service outage reported for application 'payment_gateway'; immediate resolution required!"
+
+info,"System health check passed with no issues detected across all services and applications."
+
+non-critical,"User session expired due to inactivity after 20 minutes; prompting re-login."
+
+critical,"Malware detected on server; initiating quarantine procedure and alerting IT security team."
+
+info,"Configuration changes applied successfully to server settings without any errors logged."
+
+non-critical,"Network bandwidth usage is currently stable and within normal operational limits."
+
+critical,"High CPU usage detected on server; exceeding safe limits of operation; initiating scaling procedures."
+
+info,"Backup verification completed with no errors found during the process; all files accounted for."
+
+non-critical,"User password changed successfully at timestamp: 2024-10-19T14:30:00Z; confirmation sent via email."
+
+critical,"Critical failure in RAID array detected; immediate action required to prevent data loss!"
+
+info,"New SSL certificate installed and activated successfully for domain 'example.com'."
+
+non-critical,"Session token expired; user needs to re-authenticate to continue accessing resources."
+
+critical,"Unauthorized data access attempt logged from external IP address (198.51.100.25); blocking now..."
+
+info,"Log file size has reached limit; archiving old logs and compressing for storage efficiency now..."
+
+non-critical,"Network performance metrics collected and stored for future analysis and optimization efforts."
+
+critical,"Service crash report generated; reviewing stack trace for errors and potential fixes required."
+
+info,“Configuration file '/etc/nginx/nginx.conf’ loaded successfully without any syntax errors.”
+
+non-critical,“User feedback submitted through the application interface regarding recent updates.”
+
+critical,“Unexpected termination of process ID 6789 due to segmentation fault; analyzing core dump.”
+
+info,“New user registered with email ‘newuser@example.com’ at timestamp: 2024-10-19T15:45:00Z.”
+
+non-critical,“Firewall rules updated to allow traffic on port 80 for HTTP requests.”
+
+critical,“Data breach reported; sensitive customer information may have been exposed during incident.”
+
+info,“Log rotation completed for file '/var/log/syslog'; old logs archived successfully.”
+
+non-critical,“System performance metrics collected indicate a slight increase in response times over the last week.”
+
+critical,“Service dependency failure detected, unable to start service ‘api_gateway’ due to missing libraries.”
+
+info,“Scheduled task ran successfully, processed a total of 750 records without issues.”
+
+non-critical,“Temporary network outage experienced earlier today; service restored within minutes.”
+
+critical,“Critical system error encountered while processing request ID #9876; immediate attention needed!”
+
+info,“New software update available for installation on server ‘app02’; notifying admin team.”
+
+non-critical,“User session terminated due to inactivity after exceeding allowed time limit.”
+
+critical,“Unauthorized access attempt logged from multiple sources; escalating incident response procedures.”
+
+info,“Log file cleanup initiated; removing entries older than six months as per retention policy.”
+
+non-critical,“Network latency returned to normal levels after troubleshooting efforts were implemented.”
+
+critical,“Service outage reported for application ‘user_authentication’; root cause analysis underway!”
+
+info,“API request received from client IP: 192.168.1.100 at timestamp: 2024-10-19T16:15:00Z.”
+
+non-critical,“User profile updated successfully with new contact information and preferences.”
+
+critical,“Critical failure reported in application ‘order_processing’; immediate rollback initiated!”
+
+info,“System uptime recorded at an impressive total of 150 days without any reboot or downtime.”
+
+Disk space utilization has reached critical levels on server ‘fileserver01’, immediate action required!”
+
+Unauthorized modification of configuration file ‘/etc/my.cnf’ detected, reverting changes now!”
+
+New device connected to the network with MAC address ‘00:1A:2B:3C:4D:5E’.”
+
+Service ‘httpd’ restarted successfully after configuration changes were applied.”
+
+Multiple failed login attempts detected for user ‘root’; locking account temporarily as a precaution.”
+
+Scheduled backup completed successfully with no errors reported during the process.”
+
+User ‘charlie_brown’ changed their email address from ‘charlie@example.com’ to ‘charlie.brown@example.com’.”
+
+Unexpected shutdown of service ‘database_service’; investigating root cause immediately!”
+
+Performance metrics indicate that CPU usage is currently below normal thresholds across all servers.”
+
+Temporary files cleaned up from directory ‘/tmp’, freeing up approximately 500MB of disk space.”
+
+Critical vulnerability identified in web application; patching required before next deployment cycle!”
+
+New version of software package ‘nginx’ installed successfully with version number ‘1.21.0’.”
+
+User session extended due to ongoing activity on the platform without interruptions.”
+
+Data integrity issue detected in database table ‘orders’; initiating recovery process now!”
+
+System maintenance window scheduled for this weekend from midnight to 6 AM on Saturday.”
+
+Email alert sent regarding low disk space warning on volume ‘/dev/sdb1’.”
+
+Service crash logged for application ‘payment_processing’; root cause analysis initiated immediately!”
+
+New API endpoint created for retrieving user profile information with enhanced security measures implemented.”
+
+Network configuration changes applied successfully without any downtime experienced by users.”
+
+Malicious activity detected originating from IP address ‘192.0.2.1’; blocking access immediately!”
+
+Log analysis completed with no anomalies found during the review period of the last week’s logs.”
+
+User feedback received regarding recent UI changes, compiling responses for review by the design team.”
+
+Emergency patch deployed following discovery of zero-day exploit affecting multiple systems globally!”
+
+Database replication process completed successfully with no discrepancies noted between master and slave databases.”
+
+Service health checks indicate all systems operational with no reported issues across monitored services.”
+
+Unauthorized access attempt recorded in security logs; alerting IT security team for further investigation!”
+
+New user role created within the system allowing access to restricted areas based on department needs.”
+
+Routine maintenance performed on server ‘app_server_03’; all services restarted without incidents reported.”
+
+Data breach confirmed affecting sensitive customer information; notifying affected parties as per compliance regulations!”
+
+Backup restoration process initiated following accidental deletion of critical files from production environment.”
+
+User account locked out after exceeding maximum number of failed login attempts; notifying administrator now!”
+
+Service unresponsive due to resource exhaustion; escalating issue to engineering team for rapid resolution!”
+
+Scheduled updates applied across all servers with successful completion noted in change management logs.”
+
+System performance monitoring indicates slight degradation during peak hours; analyzing traffic patterns now!”
+
+Critical error encountered while processing payment transactions; reverting changes and notifying affected users immediately!”
+
+New security protocols implemented across all applications following recent audit findings and recommendations made by external consultants.”
+
+Firewall rules updated to enhance security posture against known threats following recent vulnerability assessments conducted by internal teams.” 
+
