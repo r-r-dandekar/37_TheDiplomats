@@ -91,7 +91,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Window-Settings
         self.setWindowTitle(AppConfig.APP_NAME)
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 100, 600, 200)
 
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
@@ -176,7 +176,6 @@ class MainWindow(QMainWindow):
     def click_logs_tab(self):
         self.chatbot_button.setChecked(False)
         if self.tab != "logs":
-            print('Hi')
             self.right_layout.addWidget(self.logs_widget)
             self.right_layout.removeWidget(self.chatbot_widget)
             self.chatbot_widget.setParent(None)
@@ -185,7 +184,6 @@ class MainWindow(QMainWindow):
     def click_chatbot_tab(self):
         self.logs_button.setChecked(False)
         if self.tab != "chatbot":
-            print('Bye')
             self.right_layout.addWidget(self.chatbot_widget)
             self.right_layout.removeWidget(self.logs_widget)
             self.logs_widget.setParent(None)
@@ -251,7 +249,7 @@ class MainWindow(QMainWindow):
         treeview.setRootIndex(self.model.index(QDir.rootPath()))  # Display the file system
 
         treeview.setFixedWidth(250)  # Set fixed width to 250 pixels
-        treeview.setMinimumHeight(600)  # Ensure minimum height
+        treeview.setMinimumHeight(400)  # Ensure minimum height
         treeview.setColumnWidth(0, 250)
         return treeview
 
