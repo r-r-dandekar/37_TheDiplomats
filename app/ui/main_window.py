@@ -14,6 +14,8 @@ from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
 from .widgets.accordion import *
 from ..utils.config import config
+from PyQt6.QtGui import QTextOption, QIcon  # Added QIcon here
+
 
 
 class MainWindow(QMainWindow):
@@ -33,6 +35,33 @@ class MainWindow(QMainWindow):
             cursor.removeSelectedText()
             cursor.clearSelection()
             self.terminal.setTextCursor(cursor)
+
+    def create_new_folder(self) -> None:
+        """
+        Event handler for the "Create New Folder" button. 
+        Creates a new folder in the currently selected directory in the tree view.
+        """
+        # Get the currently selected directory from the tree view
+        current_index = self.treeview.currentIndex()
+        if current_index.isValid():
+            # Get the path of the selected directory
+            folder_path = self.model.filePath(current_index)
+
+            # Open a dialog to get the new folder name
+            new_folder_name, ok = QInputDialog.getText(self, "New Folder", "Enter folder name:")
+        
+            if ok and new_folder_name:
+                new_folder_path = os.path.join(folder_path, new_folder_name)
+                try:
+                    os.makedirs(new_folder_path)  # Create the new folder
+                    print(f"Created New Folder: {new_folder_path}")
+                    # Update the tree view to reflect the new folder
+                    self.treeview.setRootIndex(self.model.index(folder_path))
+                except Exception as e:
+                    print(f"Error creating folder: {e}")
+        else:
+            print("No valid directory selected.")
+
 
     def copy_text(self) -> None:
         """
@@ -126,10 +155,17 @@ class MainWindow(QMainWindow):
         container.setMaximumWidth(250)
         v_layout = QVBoxLayout(container)  # Vertical layout for tree view and navbar
 
-        # Create and add the navigation bar
+       # Create and add the navigation bar
         self.navbar = ToolBar(self, orientation=Qt.Orientation.Horizontal,
-                              style=Qt.ToolButtonStyle.ToolButtonTextUnderIcon, icon_size=(18, 18))
-        self.navbar.add_button("Open Folder", "resources/assets/icons/windows/imageres-10.ico", self.open_folder)
+                      style=Qt.ToolButtonStyle.ToolButtonTextUnderIcon, icon_size=(18, 18))
+
+        # Adding "Open Folder" button with an icon
+        open_folder_icon = QIcon("resources/assets/icons/windows/folder.ico")
+        self.navbar.add_button("Open Folder", open_folder_icon, self.open_folder)
+
+        # Adding "Create New Folder" button with an icon
+        new_folder_icon = QIcon("resources/assets/icons/windows/create-folder.ico")
+        self.navbar.add_button("Create New Folder", new_folder_icon, self.create_new_folder)
 
         # Set the border for the toolbar
         self.navbar.setStyleSheet("QToolBar { border: 1px solid #cfcaca; padding: 5px; }")  # Adjust thickness and padding

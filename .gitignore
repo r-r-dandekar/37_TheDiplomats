@@ -180,3 +180,4 @@ resources/assets/icons/windows/*
 .pt
 multi-class-classification/distilbert-finetuned-imdb-multi-label/model.safetensors
 multi-class-classification/distilbert-finetuned-imdb-multi-label/
+/multi-class-classification
