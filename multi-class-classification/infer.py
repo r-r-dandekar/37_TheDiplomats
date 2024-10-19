@@ -26,7 +26,8 @@ def infer(text):
 
     return label
 
-while True:
-  # text = "Session: 30546354_3321642168 initialized by client WindowsUpdateAgent."
-  text=input()
-  print(infer(text))
+if __name__ == "__main__":
+    while True:
+        # text = "Session: 30546354_3321642168 initialized by client WindowsUpdateAgent."
+        text=input()
+        print(infer(text))

@@ -1,5 +1,5 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QSizePolicy 
+from PyQt6.QtWidgets import QApplication, QScrollArea, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QSizePolicy 
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QPixmap, QColor
 from ...utils.config import config
@@ -63,14 +63,20 @@ class AccordionSection(QWidget):
         self.content_area = QWidget()
         self.content_area_layout = QVBoxLayout()
         self.content_area.setLayout(self.content_area_layout)
+        self.main_layout.setContentsMargins(5,5,5,5)
+        self.main_layout.setSpacing(0)
         # self.content_area_layout.addWidget(QLabel(content))
-        self.content_area.setVisible(False)  # Initially collapsed
         self.content_area.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.content_area.setStyleSheet(f"background-color: {color_light}; border: 1px solid {color_light};")
 
+        self.scroll_area = QScrollArea()
+        self.scroll_area.setVisible(False)  # Initially collapsed
+        self.scroll_area.setWidget(self.content_area)
+        self.scroll_area.setWidgetResizable(True)  
+
         # Add the button and content area to the main layout
         self.main_layout.addWidget(self.toggle_button)
-        self.main_layout.addWidget(self.content_area)
+        self.main_layout.addWidget(self.scroll_area)
 
         # Set the layout for the section
         self.setLayout(self.main_layout)
@@ -83,7 +89,7 @@ class AccordionSection(QWidget):
             self.setMaximumHeight(HEIGHT)
         else:
             self.setMaximumHeight(1000)
-        self.content_area.setVisible(visible)
+        self.scroll_area.setVisible(visible)
         # Change the arrow icon based on the expanded/collapsed state
         self.arrow_label.setPixmap(self.arrow_down if visible else self.arrow_right)
 

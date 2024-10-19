@@ -1,7 +1,7 @@
 import sys
 import os
 import subprocess
-from PyQt6.QtCore import QProcess, Qt, QDir
+from PyQt6.QtCore import QProcess, Qt, QDir, QModelIndex
 from PyQt6.QtGui import QTextOption
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QFileDialog,
@@ -14,7 +14,7 @@ from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
 from .widgets.accordion import *
 from ..utils.config import config
-from ..logs import showlog
+from ..logs import sortlogs
 from PyQt6.QtGui import QTextOption, QIcon  # Added QIcon here
 
 
@@ -113,11 +113,38 @@ class MainWindow(QMainWindow):
         self.right_container = QWidget(self)
         self.right_layout = QVBoxLayout(self.right_container)  # Vertical layout for the right side
 
-        # Create the "Errors" navbar
-        self.errors_navbar = QLabel("Errors", self)
-        self.errors_navbar.setStyleSheet("background-color: darkred; color: white; font-weight: bold; font-size: 16px; padding: 5px;")  # Adjust font-size here
-        self.errors_navbar.setFixedHeight(50)  # Set fixed height for the navbar to match the toolbar height
-        self.right_layout.addWidget(self.errors_navbar)  # Add the errors navbar to the layout
+        # Create the "logs" navbar
+        self.navbar = QWidget()
+        self.navbar.setStyleSheet("background-color: #333333; color: white; font-weight: bold; font-size: 16px; padding: 5px;")  # Adjust font-size here
+        self.navbar.setFixedHeight(40)
+        self.logs_button = QPushButton("Errors Log Info", self)
+        self.logs_button.setFlat(True)
+        self.logs_button.setCheckable(True)
+        self.logs_button.clicked.connect(self.click_logs_tab)
+        self.logs_button.setStyleSheet("background-color: #4d4d4d; color: white; font-weight: bold; font-size: 16px; padding: 5px;")  # Adjust font-size here
+        self.chatbot_button = QPushButton("Chatbot", self)
+        self.chatbot_button.setFlat(True)
+        self.chatbot_button.setCheckable(True)
+        self.chatbot_button.clicked.connect(self.click_chatbot_tab)
+        self.chatbot_button.setStyleSheet("background-color: #4d4d4d; color: white; font-weight: bold; font-size: 16px; padding: 5px;")  # Adjust font-size here
+        navbar_layout = QHBoxLayout()
+        navbar_layout.addWidget(self.logs_button)
+        navbar_layout.addWidget(self.chatbot_button)
+        navbar_layout.setContentsMargins(0,0,0,0)
+        navbar_layout.setSpacing(0)
+        self.navbar.setLayout(navbar_layout)
+        self.right_layout.addWidget(self.navbar)
+        
+        self.right_layout.setContentsMargins(0,0,0,0)
+        self.right_layout.setSpacing(0)
+        
+        self.logs_widget = QWidget()
+        logs_widget_layout = QVBoxLayout()
+        self.logs_widget.setLayout(logs_widget_layout)
+        
+        self.chatbot_widget = QWidget()
+        chatbot_widget_layout = QVBoxLayout()
+        self.chatbot_widget.setLayout(chatbot_widget_layout)
 
         self.log_critical = AccordionSection("Critical", "Hello this is a test", 'red')    
         self.log_non_critical = AccordionSection("Non-Critical", "You can collapse this", 'orange')        
@@ -125,20 +152,15 @@ class MainWindow(QMainWindow):
 
         self.log_critical.show_list(["hi", 'BUE', "xrthi"])
 
-        # Add a blank space (QTextEdit for demonstration, could be any widget)
-        # self.blank_space = QTextEdit(self)
-        # self.blank_space.setReadOnly(True)
-        # self.blank_space.setPlaceholderText("Blank Space Above Terminal")
-        # self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
-        # self.blank_space.setFixedHeight(400)
-        self.right_layout.setContentsMargins(5,5,5,5)
-        self.right_layout.setSpacing(3)
-        self.right_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
-        self.right_layout.addWidget(self.log_critical, stretch=4)  # Adjusted stretch for blank space
-        self.right_layout.addWidget(self.log_non_critical, stretch=4)  # Adjusted stretch for blank space
-        self.right_layout.addWidget(self.log_info, stretch=4)  # Adjusted stretch for blank space
-        self.terminal = self.create_terminal()  # Create the terminal
-        self.right_layout.addWidget(self.terminal, stretch=6)  # Adjusted stretch for terminal
+        logs_widget_layout.setContentsMargins(5,5,5,5)
+        logs_widget_layout.setSpacing(3)
+        logs_widget_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        logs_widget_layout.addWidget(self.log_critical, stretch=4)
+        logs_widget_layout.addWidget(self.log_non_critical, stretch=4)  
+        logs_widget_layout.addWidget(self.log_info, stretch=4)
+
+        self.right_layout.addWidget(self.logs_widget)
+        self.tab="logs"
 
         # Add the left layout and right container to the main layout
         layout.addLayout(self.left_layout)  # Add the left layout to the main layout
@@ -150,6 +172,21 @@ class MainWindow(QMainWindow):
 
         # Create and add the menu bar
         self.setMenuBar(MenuBar(self))  # Pass the main window to MenuBar
+    
+    def click_logs_tab(self):
+        self.chatbot_button.setChecked(False)
+        if self.tab != "logs":
+            self.right_layout
+            self.right_layout.addWidget(self.logs_widget)
+            self.right_layout.removeWidget(self.chatbot_widget)
+            self.tab="logs"
+
+    def click_chatbot_tab(self):
+        self.logs_button.setChecked(False)
+        if self.tab != "chatbot":
+            self.right_layout.addWidget(self.chatbot_widget)
+            self.right_layout.removeWidget(self.logs_widget)
+            self.tab="chatbot"
 
     def create_treeview_container(self) -> QWidget:
         """
@@ -181,7 +218,7 @@ class MainWindow(QMainWindow):
 
         # Create and add the tree view
         self.treeview = self.create_treeview()
-        self.treeview.clicked.connect(self.showlog)
+        self.treeview.clicked.connect(self.showlogs)
         v_layout.addWidget(self.treeview)  # Add the tree view to the vertical layout
 
         container.setLayout(v_layout)
@@ -230,9 +267,12 @@ class MainWindow(QMainWindow):
         else:
             print("No folder selected.")
         
-    def showlog(self, index: QModelIndex):
+    def showlogs(self, index: QModelIndex):
         file_path = self.model.filePath(index)
-        showlog(file_path)
+        critical, non_critical, info = sortlogs(file_path)
+        self.log_critical.show_list(critical)
+        self.log_non_critical.show_list(non_critical)
+        self.log_info.show_list(info)
 
 
 # Standard PyQt app initialization
