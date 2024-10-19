@@ -1,6 +1,9 @@
 import threading
 import sys
-from PyQt6.QtWidgets import QApplication, QTextEdit, QScrollArea, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QSizePolicy 
+from PyQt6.QtWidgets import (
+    QApplication, QTextEdit, QScrollArea, QWidget,
+    QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QSizePolicy
+)
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont
 from ..chatbot import ask
@@ -9,7 +12,6 @@ color_light = '#cccccc'
 color_dark = '#b3b3b3'
 
 class ChatbotTab(QWidget):
-
     def __init__(self):
         super().__init__()
         layout = QVBoxLayout()
@@ -23,22 +25,22 @@ class ChatbotTab(QWidget):
 
         # Using QTextEdit for multi-line input
         self.prompt_box = QTextEdit()
-        self.prompt_box.setFixedHeight(50)  # Increase height
-        self.prompt_box.setFixedWidth(900)   # Increase width
+        self.prompt_box.setFixedHeight(50)  # Set fixed height
+        self.prompt_box.setFixedWidth(900)   # Set fixed width
         self.prompt_box.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
 
-        # Set the background color of the prompt box to #212121
-        self.prompt_box.setStyleSheet("QTextEdit {background-color: #363535; color: black;}")  # Set background color and text color
+        # Set the background color of the prompt box
+        self.prompt_box.setStyleSheet("QTextEdit {background-color: #444444; color: white;}")
 
         # Set font size for the prompt box
         font = QFont()
         font.setPointSize(12)  # Set initial font size
         self.prompt_box.setFont(font)
 
-        # Making submit button smaller
+        # Submit button
         prompt_button = QPushButton("Submit")
-        prompt_button.setFixedHeight(50)  # Small height for the button
-        prompt_button.setFixedWidth(80)    # Small width for the button
+        prompt_button.setFixedHeight(50)  # Fixed height for the button
+        prompt_button.setFixedWidth(80)    # Fixed width for the button
         prompt_button.clicked.connect(self.submit_prompt)
 
         prompt_layout.addWidget(self.prompt_box)
@@ -46,7 +48,7 @@ class ChatbotTab(QWidget):
 
         prompt_widget = QWidget()
         prompt_widget.setLayout(prompt_layout)
-        
+
         self.chat_widget_layout = QVBoxLayout()
         self.chat_widget = QWidget()
         self.chat_widget.setLayout(self.chat_widget_layout)
@@ -54,8 +56,8 @@ class ChatbotTab(QWidget):
 
         self.chat_scroller = QScrollArea()
         self.chat_scroller.setWidget(self.chat_widget)
-        self.chat_scroller.setWidgetResizable(True)  
-        self.chat_scroller.setStyleSheet(f"background-color: #212121") 
+        self.chat_scroller.setWidgetResizable(True)
+        self.chat_scroller.setStyleSheet("background-color: #212121")
 
         layout.addWidget(self.chat_scroller)
         layout.addWidget(prompt_widget)
@@ -68,20 +70,29 @@ class ChatbotTab(QWidget):
         
         # Set larger font size for the prompt label
         prompt_label = QLabel(prompt)
-        prompt_label.setStyleSheet("QLabel {color: black; border-radius: 10px; background-color: #212121; padding: 10px;}")
-        prompt_label.setMinimumWidth(400)
-        prompt_label.setFont(QFont("", 14))  # Increase font size by 2px
-        
+        prompt_label.setWordWrap(True)  # Enable word wrap
+        prompt_label.setStyleSheet("QLabel {color: white; border-radius: 15px; background-color: #555555; padding: 10px;}")  # Rounded corners and color
+        prompt_label.setMinimumHeight(40)  # Optional: Set a minimum height to control appearance
+        font = QFont("Arial", 14)  # Set a nicer font
+        prompt_label.setFont(font)  # Apply the font to the label
+
+        # Add prompt label to chat widget layout
         self.chat_widget_layout.addWidget(prompt_label, alignment=Qt.AlignmentFlag.AlignRight)
-        
+
+        # Create a response label
         response_label = QLabel("Searching the web for answers...")
-        response_label.setStyleSheet("QLabel {color: black; border-radius: 10px; background-color: white; margin: 10px;}")
-        response_label.setMinimumWidth(400)
-        response_label.setFont(QFont("", 14))  # Increase font size by 2px
+        response_label.setWordWrap(True)  # Enable word wrap for the response label
+        response_label.setStyleSheet("QLabel {color: white; border-radius: 15px; background-color: #444444; margin: 10px; padding: 10px;}")  # Rounded corners and color
+        response_label.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)  # Allow the label to expand horizontally
+        response_label.setFont(QFont("Arial", 14))  # Set a nicer font
+
+        # Add the response label to the chat widget layout
         self.chat_widget_layout.addWidget(response_label, alignment=Qt.AlignmentFlag.AlignLeft)
-        
+
+        # Start a thread to fetch the response
         thread = threading.Thread(target=self.concurrent_ask, args=(prompt, response_label))
         thread.start()  # Start the thread to fetch response
+
 
     def concurrent_ask(self, prompt, response_label):
         self.searching = True
@@ -95,3 +106,10 @@ class ChatbotTab(QWidget):
             self.submit_prompt()  # Call submit prompt
         else:
             super().keyPressEvent(event)  # Call the base class method
+
+# Add the following lines if you're running this as a standalone application.
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = ChatbotTab()
+    window.show()
+    sys.exit(app.exec())
