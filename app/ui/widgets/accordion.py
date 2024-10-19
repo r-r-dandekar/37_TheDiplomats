@@ -66,6 +66,7 @@ class AccordionSection(QWidget):
         # Create the content of the accordion
         self.content_area = QWidget()
         self.content_area_layout = QVBoxLayout()
+        self.content_area_layout.setSpacing(0)
         self.content_area.setLayout(self.content_area_layout)
         self.main_layout.setContentsMargins(5,5,5,5)
         self.main_layout.setSpacing(0)
@@ -93,11 +94,12 @@ class AccordionSection(QWidget):
             items.append(self.main_window.result_queue.get())
         
         for level, log in items:
+            print(self.color)
             if level == 'critical' and self.color == 'red':
                 self.show_log(log)
-            elif level == 'critical' and self.color == 'orange':
+            elif level == 'non-critical' and self.color == 'orange':
                 self.show_log(log)
-            elif level == 'critical' and self.color == 'green':
+            elif level == 'info' and self.color == 'green':
                 self.show_log(log)
 
         # Toggle the visibility of the content area
@@ -112,7 +114,7 @@ class AccordionSection(QWidget):
 
     def show_log(self, string):
         label = QLabel(string)
-        label.setStyleSheet(f"color: {self.color};")
+        label.setStyleSheet(f"color: {self.color}; font-size: 1.1em;")
         self.content_area_layout.addWidget(label)
 
 
