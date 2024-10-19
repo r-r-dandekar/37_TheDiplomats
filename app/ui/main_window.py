@@ -29,28 +29,24 @@ class MainWindow(QMainWindow):
         super().__init__()
         # Window-Settings
         self.setWindowTitle(AppConfig.APP_NAME)
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 0, 800, 600)
 
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)
 
-        # Main layout using a horizontal splitter for resizable columns
+        # Main layout
         layout = QHBoxLayout(central_widget)
         central_widget.setLayout(layout)
-        
-        # Create a QSplitter for resizable left and right panels
-        splitter = QSplitter(Qt.Orientation.Horizontal)
-        layout.addWidget(splitter)
 
-        # Create treeview container on the left
+        # Create a vertical layout for the left panel
+        self.left_layout = QVBoxLayout()  # New vertical layout for the left column
+
+        # Create treeview container
         self.treeview_container = self.create_treeview_container()
-        splitter.addWidget(self.treeview_container)  # Add to splitter
 
-        # Create a container for the right panel (contains blank space and terminal)
-        self.right_container = self.create_right_container()
-        splitter.addWidget(self.right_container)  # Add right container to splitter
+        # Add the tree view container to the left layout
+        self.left_layout.addWidget(self.treeview_container)  # Add tree view container
 
-        splitter.setSizes([200, 600])  # Set initial sizes for the columns
         # Create a container for the right panel (70% blank space above the terminal)
         self.right_container = QWidget(self)
         self.right_layout = QVBoxLayout(self.right_container)  # Vertical layout for the right side
@@ -76,17 +72,17 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.right_container)  # Add right container to the main layout
 
         # Set margins and spacing to zero to eliminate gaps
-        layout.setContentsMargins(0, 0, 0, 0)
-        layout.setSpacing(0)
+        layout.setContentsMargins(0, 0, 0, 0)  # Remove margins around the main layout
+        layout.setSpacing(0)  # Remove spacing between left and right columns
 
         # Create and add the menu bar
         self.setMenuBar(MenuBar(self))  # Pass the main window to MenuBar
 
         # Initialize and start the command prompt
-        # self.process = QProcess()
-        # self.process.start("cmd.exe")
-        # self.process.readyReadStandardOutput.connect(self.handle_output)
-        # self.process.readyReadStandardError.connect(self.handle_error)
+        self.process = QProcess()
+        self.process.start("cmd.exe")
+        self.process.readyReadStandardOutput.connect(self.handle_output)
+        self.process.readyReadStandardError.connect(self.handle_error)
 
         # Run a command in the terminal at startup
         self.run_command_in_terminal("echo Welcome to the integrated terminal!\n")
@@ -95,24 +91,31 @@ class MainWindow(QMainWindow):
         """
         Overrides the close event to terminate the QProcess if it's running.
         """
-        print('testtt')
-        # if self.process.state() == QProcess.ProcessState.Running:
-        #     self.process.terminate()  # Safely terminate the process
-        #     self.process.waitForFinished()  # Wait for the process to finish
+        if self.process.state() == QProcess.ProcessState.Running:
+            self.process.terminate()  # Safely terminate the process
+            self.process.waitForFinished()  # Wait for the process to finish
 
-        # event.accept()  # Accept the event to close the window
+        event.accept()  # Accept the event to close the window
 
     def create_treeview_container(self) -> QWidget:
         """
         Creates a container widget for the tree view and navigation bar.
         """
         container = QWidget(self)
+        container.setMaximumWidth(250)
         v_layout = QVBoxLayout(container)  # Vertical layout for tree view and navbar
 
         # Create and add the navigation bar
         self.navbar = ToolBar(self, orientation=Qt.Orientation.Horizontal,
                               style=Qt.ToolButtonStyle.ToolButtonTextUnderIcon, icon_size=(18, 18))
         self.navbar.add_button("Open Folder", "resources/assets/icons/windows/imageres-10.ico", self.open_folder)
+
+        # Set the border for the toolbar
+        self.navbar.setStyleSheet("QToolBar { border: 1px solid #cfcaca; padding: 5px; }")  # Adjust thickness and padding
+        
+        # Set the width of the toolbar to match the tree view
+        self.navbar.setFixedWidth(250)  # Match the tree view width
+
         v_layout.addWidget(self.navbar)  # Add the navigation bar to the vertical layout
 
         # Create and add the tree view
@@ -136,41 +139,6 @@ class MainWindow(QMainWindow):
         terminal.keyPressEvent = self.custom_keypress_event(terminal.keyPressEvent)
 
         return terminal
-
-    def create_right_container(self) -> QWidget:
-        """
-        Creates the right container with resizable space for terminal and other widgets.
-        """
-        right_container = QWidget(self)
-        right_layout = QVBoxLayout(right_container)
-
-        # Errors navbar
-        errors_navbar = QLabel("Errors", self)
-        errors_navbar.setStyleSheet("background-color: darkred; color: white; font-weight: bold; font-size: 16px; padding: 5px;")
-        errors_navbar.setFixedHeight(50)  # Set fixed height for the navbar
-        right_layout.addWidget(errors_navbar)  # Add the errors navbar to the layout
-
-        # Create a vertical splitter for resizable blank space and terminal
-        vertical_splitter = QSplitter(Qt.Orientation.Vertical)
-
-        # Add a blank space (can be any widget)
-        blank_space = QTextEdit(self)
-        blank_space.setReadOnly(True)
-        blank_space.setPlaceholderText("Blank Space Above Terminal")
-        blank_space.setStyleSheet("background-color: lightgray;")
-        vertical_splitter.addWidget(blank_space)
-
-        # Add the terminal below
-        self.terminal = self.create_terminal()
-        vertical_splitter.addWidget(self.terminal)
-
-        # Set initial sizes for blank space and terminal
-        vertical_splitter.setSizes([300, 300])
-
-        # Add the splitter to the right layout
-        right_layout.addWidget(vertical_splitter)
-
-        return right_container
 
     def custom_keypress_event(self, original_keypress_event):
         """
@@ -229,6 +197,8 @@ class MainWindow(QMainWindow):
         treeview.setModel(self.model)
         treeview.setRootIndex(self.model.index(QDir.rootPath()))  # Display the file system
 
+        treeview.setFixedWidth(250)  # Set fixed width to 250 pixels
+        treeview.setMinimumHeight(600)  # Ensure minimum height
         treeview.setColumnWidth(0, 250)
         return treeview
 
@@ -236,9 +206,16 @@ class MainWindow(QMainWindow):
         """
         Event handler for the "Open Folder" button. Opens a folder selection dialog and updates the tree view.
         """
+        # Open the folder selection dialog
         folder_path = QFileDialog.getExistingDirectory(self, "Select Folder")
+
+        # Check if a folder is selected
         if folder_path:
+            print(f"Selected Folder: {folder_path}")
+            # Update the tree view to display the contents of the selected folder
             self.treeview.setRootIndex(self.model.index(folder_path))
+        else:
+            print("No folder selected.")
 
 
 # Standard PyQt app initialization
