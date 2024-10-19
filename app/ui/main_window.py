@@ -2,7 +2,6 @@ import threading
 import sys
 import os
 import subprocess
-from .widgets.pie_chart import PieChart
 from PyQt6.QtCore import QProcess, Qt, QDir, QModelIndex
 from PyQt6.QtGui import QTextOption
 from PyQt6.QtWidgets import (
@@ -162,27 +161,6 @@ class MainWindow(QMainWindow):
         logs_widget_layout.addWidget(self.log_non_critical, stretch=4)  
         logs_widget_layout.addWidget(self.log_info, stretch=4)
 
-        # Create a spacer to push the pie chart frame to the bottom
-        spacer = QWidget()  # Create a spacer widget
-        spacer.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)  # Set it to expand
-        logs_widget_layout.addWidget(spacer)  # Add the spacer to the layout
-
-        # Create a box (QFrame) at the bottom for the pie chart
-        # After creating the pie chart frame
-        self.pie_chart_frame = QFrame(self.logs_widget)
-        self.pie_chart_frame.setStyleSheet("background-color: #f0f0f0; border: 1px solid #cccccc;")
-        self.pie_chart_frame.setFixedHeight(400)  # Set the height for the pie chart area
-
-        self.pie_chart_frame_layout = QVBoxLayout(self.pie_chart_frame)  # Create a layout for the pie chart frame
-        # Add the pie chart frame to the bottom of the logs widget layout
-        logs_widget_layout.addWidget(self.pie_chart_frame, stretch=2)  # You can adjust the stretch factor
-
-            # Create the PieChart instance and add it to the pie chart frame
-        self.pie_chart = PieChart()  # Create an instance of the PieChart
-        self.pie_chart.colors = ['Red', 'orange', 'green']  # Set specific colors for each section        self.pie_chart_frame_layout = QVBoxLayout(self.pie_chart_frame)  # Create a layout for the pie chart frame
-        self.pie_chart_frame_layout.addWidget(self.pie_chart)  # Add the pie chart to the layout
-
-        
         self.right_layout.addWidget(self.logs_widget)
         self.tab="logs"
 
@@ -301,18 +279,15 @@ class MainWindow(QMainWindow):
             layout.removeItem(layout.itemAt(0)) 
         
     def showlogs(self, index: QModelIndex):
+        if (self.log_critical.content_area.isVisible()): self.log_critical.toggle_button.click()
+        if (self.log_non_critical.content_area.isVisible()): self.log_non_critical.toggle_button.click()
+        if (self.log_info.content_area.isVisible()): self.log_info.toggle_button.click()
+        self.remove_all_widgets(self.log_critical.content_area_layout)
+        self.remove_all_widgets(self.log_non_critical.content_area_layout)
+        self.remove_all_widgets(self.log_info.content_area_layout)
         file_path = self.model.filePath(index)
-        critical, non_critical, info = sortlogs(file_path)
-
-        self.log_critical.show_list(critical)
-        self.log_non_critical.show_list(non_critical)
-        self.log_info.show_list(info)
-
-        # Update the pie chart data based on the log counts
-        self.pie_chart.data = [len(critical), len(non_critical), len(info)]  # Update the data
-        self.pie_chart.update_chart()  # Refresh the pie chart
-
-
+        thread = threading.Thread(target=logs_showlogs, args=(file_path, self, self.result_queue))
+        thread.start()
 
 
 # Standard PyQt app initialization
