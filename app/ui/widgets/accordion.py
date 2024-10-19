@@ -1,34 +1,46 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QFrame
-from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtGui import QPixmap, QIcon
+from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel, QSizePolicy 
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QPixmap, QColor
 
+HEIGHT = 35
+color_light = '#cccccc'
+color_dark = '#999999'
 
 class AccordionSection(QWidget):
-    def __init__(self, title, content):
+
+    def __init__(self, title, content, color):
         super().__init__()
 
+        self.setFixedHeight(HEIGHT)
+        
         # Create the layout for the section
         self.main_layout = QVBoxLayout()
+        self.main_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
+        
+        self.main_layout.setContentsMargins(15,5,0,5)
+        self.main_layout.setSpacing(0)
 
         # Create the toggle button for the accordion (will contain circle, title, and arrow)
         self.toggle_button = QPushButton()
         self.toggle_button.setCheckable(True)
         self.toggle_button.setFlat(True)
         self.toggle_button.clicked.connect(self.toggle_content)
-        self.toggle_button.setStyleSheet("text-align: left; padding: 5px;")  # Add padding for appearance
+        self.toggle_button.setStyleSheet("text-align: left; padding: 0px;")  # Add padding for appearance
+        self.toggle_button.setFixedHeight(HEIGHT)
 
         # Create a horizontal layout for the button content
         button_layout = QHBoxLayout()
+        button_layout.setContentsMargins(10,0,5,2)
+        button_layout.setSpacing(0)
 
         # Small circle on the left
         self.circle_label = QLabel()
         self.circle_label.setFixedSize(15, 15)
-        self.circle_label.setStyleSheet("background-color: blue; border-radius: 7px;")  # Circle styling
+        self.circle_label.setStyleSheet(f"background-color: {color}; border-radius: 7px;")  # Circle styling
 
         # Title label
         self.title_label = QLabel(title)
-        self.title_label.setStyleSheet("padding-left: 10px;")  # Title padding for better spacing
 
         # Arrow icon on the right
         self.arrow_label = QLabel()
@@ -51,6 +63,8 @@ class AccordionSection(QWidget):
         self.content_area.setLayout(self.content_area_layout)
         self.content_area_layout.addWidget(QLabel(content))
         self.content_area.setVisible(False)  # Initially collapsed
+        self.content_area.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        self.content_area.setStyleSheet(f"background-color: {color_light}; border: 1px solid {color_light};")
 
         # Add the button and content area to the main layout
         self.main_layout.addWidget(self.toggle_button)
@@ -58,10 +72,15 @@ class AccordionSection(QWidget):
 
         # Set the layout for the section
         self.setLayout(self.main_layout)
+        self.setStyleSheet(f"background-color: {color_dark}; padding: 5px; border: 1px solid {color_dark}; margin: 0px;")
 
     def toggle_content(self):
         # Toggle the visibility of the content area
         visible = not self.content_area.isVisible()
+        if not visible:
+            self.setMaximumHeight(HEIGHT)
+        else:
+            self.setMaximumHeight(1000)
         self.content_area.setVisible(visible)
         # Change the arrow icon based on the expanded/collapsed state
         self.arrow_label.setPixmap(self.arrow_down if visible else self.arrow_right)

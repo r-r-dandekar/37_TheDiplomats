@@ -58,9 +58,9 @@ class MainWindow(QMainWindow):
         self.errors_navbar.setFixedHeight(50)  # Set fixed height for the navbar to match the toolbar height
         self.right_layout.addWidget(self.errors_navbar)  # Add the errors navbar to the layout
 
-        self.log_critical = AccordionSection("Critical", "Hello this is a test")        
-        self.log_non_critical = AccordionSection("Non-Critical", "You can collapse this")        
-        self.log_info = AccordionSection("Information", "Just close this if you don't even want to see it...")        
+        self.log_critical = AccordionSection("Critical", "Hello this is a test", 'red')    
+        self.log_non_critical = AccordionSection("Non-Critical", "You can collapse this", 'orange')        
+        self.log_info = AccordionSection("Information", "Just close this if you don't even want to see it...", 'green')        
 
         # Add a blank space (QTextEdit for demonstration, could be any widget)
         # self.blank_space = QTextEdit(self)
@@ -68,6 +68,8 @@ class MainWindow(QMainWindow):
         # self.blank_space.setPlaceholderText("Blank Space Above Terminal")
         # self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
         # self.blank_space.setFixedHeight(400)
+        self.right_layout.setContentsMargins(5,5,5,5)
+        self.right_layout.setSpacing(3)
         self.right_layout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.right_layout.addWidget(self.log_critical, stretch=4)  # Adjusted stretch for blank space
         self.right_layout.addWidget(self.log_non_critical, stretch=4)  # Adjusted stretch for blank space
