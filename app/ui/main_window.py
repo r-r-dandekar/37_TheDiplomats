@@ -5,8 +5,8 @@ from PyQt6.QtCore import QProcess, Qt, QDir
 from PyQt6.QtGui import QTextOption
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QHBoxLayout, QFileDialog,
-    QTreeView, QApplication, QVBoxLayout, QTextEdit,
-    QSplitter, QSizePolicy, QLabel
+    QTreeView, QApplication, QVBoxLayout,
+    QTextEdit, QSizePolicy, QLabel
 )
 from PyQt6.QtGui import QFileSystemModel
 from ..utils.config import AppConfig
@@ -51,6 +51,29 @@ class MainWindow(QMainWindow):
         splitter.addWidget(self.right_container)  # Add right container to splitter
 
         splitter.setSizes([200, 600])  # Set initial sizes for the columns
+        # Create a container for the right panel (70% blank space above the terminal)
+        self.right_container = QWidget(self)
+        self.right_layout = QVBoxLayout(self.right_container)  # Vertical layout for the right side
+
+        # Create the "Errors" navbar
+        self.errors_navbar = QLabel("Errors", self)
+        self.errors_navbar.setStyleSheet("background-color: darkred; color: white; font-weight: bold; font-size: 16px; padding: 5px;")  # Adjust font-size here
+        self.errors_navbar.setFixedHeight(50)  # Set fixed height for the navbar to match the toolbar height
+        self.right_layout.addWidget(self.errors_navbar)  # Add the errors navbar to the layout
+
+        # Add a blank space (QTextEdit for demonstration, could be any widget)
+        self.blank_space = QTextEdit(self)
+        self.blank_space.setReadOnly(True)
+        self.blank_space.setPlaceholderText("Blank Space Above Terminal")
+        self.blank_space.setStyleSheet("background-color: lightgray;")  # Visual distinction
+        self.blank_space.setFixedHeight(400)
+        self.right_layout.addWidget(self.blank_space, stretch=4)  # Adjusted stretch for blank space
+        self.terminal = self.create_terminal()  # Create the terminal
+        self.right_layout.addWidget(self.terminal, stretch=6)  # Adjusted stretch for terminal
+
+        # Add the left layout and right container to the main layout
+        layout.addLayout(self.left_layout)  # Add the left layout to the main layout
+        layout.addWidget(self.right_container)  # Add right container to the main layout
 
         # Set margins and spacing to zero to eliminate gaps
         layout.setContentsMargins(0, 0, 0, 0)
