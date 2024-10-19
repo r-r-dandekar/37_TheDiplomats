@@ -15,6 +15,7 @@ from .widgets.toolbar import ToolBar
 from .widgets.accordion import *
 from ..utils.config import config
 from ..logs import sortlogs
+from .chatbot_tab import ChatbotTab
 from PyQt6.QtGui import QTextOption, QIcon  # Added QIcon here
 
 
@@ -120,6 +121,7 @@ class MainWindow(QMainWindow):
         self.logs_button = QPushButton("Errors Log Info", self)
         self.logs_button.setFlat(True)
         self.logs_button.setCheckable(True)
+        self.logs_button.setChecked(True)
         self.logs_button.clicked.connect(self.click_logs_tab)
         self.logs_button.setStyleSheet("background-color: #4d4d4d; color: white; font-weight: bold; font-size: 16px; padding: 5px;")  # Adjust font-size here
         self.chatbot_button = QPushButton("Chatbot", self)
@@ -142,9 +144,7 @@ class MainWindow(QMainWindow):
         logs_widget_layout = QVBoxLayout()
         self.logs_widget.setLayout(logs_widget_layout)
         
-        self.chatbot_widget = QWidget()
-        chatbot_widget_layout = QVBoxLayout()
-        self.chatbot_widget.setLayout(chatbot_widget_layout)
+        self.chatbot_widget = ChatbotTab()
 
         self.log_critical = AccordionSection("Critical", "Hello this is a test", 'red')    
         self.log_non_critical = AccordionSection("Non-Critical", "You can collapse this", 'orange')        
@@ -176,16 +176,19 @@ class MainWindow(QMainWindow):
     def click_logs_tab(self):
         self.chatbot_button.setChecked(False)
         if self.tab != "logs":
-            self.right_layout
+            print('Hi')
             self.right_layout.addWidget(self.logs_widget)
             self.right_layout.removeWidget(self.chatbot_widget)
+            self.chatbot_widget.setParent(None)
             self.tab="logs"
 
     def click_chatbot_tab(self):
         self.logs_button.setChecked(False)
         if self.tab != "chatbot":
+            print('Bye')
             self.right_layout.addWidget(self.chatbot_widget)
             self.right_layout.removeWidget(self.logs_widget)
+            self.logs_widget.setParent(None)
             self.tab="chatbot"
 
     def create_treeview_container(self) -> QWidget:

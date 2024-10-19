@@ -13,6 +13,8 @@ class AccordionSection(QWidget):
     def __init__(self, title, content, color):
         super().__init__()
 
+        self.color = color
+
         self.setFixedHeight(HEIGHT)
         
         # Create the layout for the section
@@ -95,7 +97,9 @@ class AccordionSection(QWidget):
 
     def show_list(self, list):
         for str in list:
-            self.content_area_layout.addWidget(QLabel(str))
+            label = QLabel(str)
+            label.setStyleSheet(f"color: {self.color};")
+            self.content_area_layout.addWidget(label)
 
 
 class Accordion(QWidget):
