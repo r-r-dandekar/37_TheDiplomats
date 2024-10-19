@@ -63,7 +63,7 @@ class AccordionSection(QWidget):
         self.content_area = QWidget()
         self.content_area_layout = QVBoxLayout()
         self.content_area.setLayout(self.content_area_layout)
-        self.content_area_layout.addWidget(QLabel(content))
+        # self.content_area_layout.addWidget(QLabel(content))
         self.content_area.setVisible(False)  # Initially collapsed
         self.content_area.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.content_area.setStyleSheet(f"background-color: {color_light}; border: 1px solid {color_light};")
@@ -86,6 +86,10 @@ class AccordionSection(QWidget):
         self.content_area.setVisible(visible)
         # Change the arrow icon based on the expanded/collapsed state
         self.arrow_label.setPixmap(self.arrow_down if visible else self.arrow_right)
+
+    def show_list(self, list):
+        for str in list:
+            self.content_area_layout.addWidget(QLabel(str))
 
 
 class Accordion(QWidget):

@@ -122,6 +122,8 @@ class MainWindow(QMainWindow):
         self.log_non_critical = AccordionSection("Non-Critical", "You can collapse this", 'orange')        
         self.log_info = AccordionSection("Information", "Just close this if you don't even want to see it...", 'green')        
 
+        self.log_critical.show_list(["hi", 'BUE', "xrthi"])
+
         # Add a blank space (QTextEdit for demonstration, could be any widget)
         # self.blank_space = QTextEdit(self)
         # self.blank_space.setReadOnly(True)
@@ -209,7 +211,6 @@ class MainWindow(QMainWindow):
         treeview.setFixedWidth(250)  # Set fixed width to 250 pixels
         treeview.setMinimumHeight(600)  # Ensure minimum height
         treeview.setColumnWidth(0, 250)
-        treeview.clicked.connect(self.openlog)
         return treeview
 
     def open_folder(self) -> None:
