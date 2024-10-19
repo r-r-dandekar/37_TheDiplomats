@@ -5,12 +5,8 @@ from PyQt6.QtGui import QPixmap, QColor
 from ...utils.config import config
 
 HEIGHT = 35
-if config['theme']=='dark':
-    color_light = '#404040'
-    color_dark = '#262626'
-else:
-    color_light = '#cccccc'
-    color_dark = '#999999'
+color_light = '#cccccc'
+color_dark = '#b3b3b3'
 
 class AccordionSection(QWidget):
 
@@ -46,6 +42,7 @@ class AccordionSection(QWidget):
 
         # Title label
         self.title_label = QLabel(title)
+        self.title_label.setStyleSheet("color: black;")
 
         # Arrow icon on the right
         self.arrow_label = QLabel()
