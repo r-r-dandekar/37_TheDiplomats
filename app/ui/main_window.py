@@ -269,8 +269,22 @@ class MainWindow(QMainWindow):
             self.treeview.setRootIndex(self.model.index(folder_path))
         else:
             print("No folder selected.")
+
+    def remove_all_widgets(self, layout):
+        # Iterate over the layout items and remove them
+        while layout.count():
+            widget = layout.itemAt(0).widget()     # Get the first widget
+            if widget is not None:                    # Check if widget is valid
+                widget.deleteLater()                  # Safely delete the widget
+            layout.removeItem(layout.itemAt(0)) 
         
     def showlogs(self, index: QModelIndex):
+        if (self.log_critical.content_area.isVisible()): self.log_critical.toggle_button.click()
+        if (self.log_non_critical.content_area.isVisible()): self.log_non_critical.toggle_button.click()
+        if (self.log_info.content_area.isVisible()): self.log_info.toggle_button.click()
+        self.remove_all_widgets(self.log_critical.content_area_layout)
+        self.remove_all_widgets(self.log_non_critical.content_area_layout)
+        self.remove_all_widgets(self.log_info.content_area_layout)
         file_path = self.model.filePath(index)
         thread = threading.Thread(target=logs_showlogs, args=(file_path, self, self.result_queue))
         thread.start()
