@@ -20,8 +20,37 @@ class MainWindow(QMainWindow):
     MainWindow
 
     Args:
-        QMainWindow (QMainWindow): Inheritance
-    """
+        QMainWindow  Inheritance
+    """    # ... [existing code] ...
+
+    def cut_text(self) -> None:
+        """
+        Cuts the selected text from the terminal.
+        """
+        cursor = self.terminal.textCursor()
+        if cursor.hasSelection():
+            cursor.removeSelectedText()
+            cursor.clearSelection()
+            self.terminal.setTextCursor(cursor)
+
+    def copy_text(self) -> None:
+        """
+        Copies the selected text from the terminal to the clipboard.
+        """
+        cursor = self.terminal.textCursor()
+        if cursor.hasSelection():
+            clipboard = QApplication.clipboard()
+            clipboard.setText(cursor.selectedText())
+
+    def paste_text(self) -> None:
+        """
+        Pastes text from the clipboard into the terminal.
+        """
+        clipboard = QApplication.clipboard()
+        self.terminal.insertPlainText(clipboard.text())
+
+
+    
 
     def __init__(self) -> None:
         """
