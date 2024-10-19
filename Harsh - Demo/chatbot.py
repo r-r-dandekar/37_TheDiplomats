@@ -2,21 +2,29 @@ import requests
 from serpapi import GoogleSearch
 from bs4 import BeautifulSoup
 import google.generativeai as genai
-import os  # Make sure to include this import
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get API keys from environment variables
+SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Function to perform search using SerpAPI
 def perform_search(query):
     params = {
         "engine": "google",
         "q": query,
-        "api_key": "your_serpapi_key_here"
+        "api_key": SERPAPI_KEY
     }
     
     search = GoogleSearch(params)
     results = search.get_dict()  # Get the search results as a dictionary
     
     organic_results = results.get("organic_results", [])
-    links = [result['link'] for result in organic_results]
+    links = [result['link'] for result in organic_results if 'link' in result]
     
     return links
 
@@ -37,17 +45,21 @@ def scrape_webpage(url):
 # Function to construct a prompt for the generation model
 def make_rag_prompt(query: str, relevant_passage: str):
     escaped_passage = relevant_passage.replace("'", "").replace('"', "").replace("\n", " ")
-    prompt = f"""You are a helpful and informative bot that answers questions using text from the reference passage included below.
-Be sure to respond in a complete sentence, being comprehensive, including all relevant background information.
-However, keep in mind that you are answering to a technician or an engineer or it can also be a student who seeks help from you. Be technical and provide answers like Step 1 : .....
-Step 2 : ....
-and so on
-and also specify whether the error is : 
-1. Critical
-2. Non Critical
-3. Warning
-QUESTION: '{query}'
-PASSAGE: '{escaped_passage}'
+    prompt = f"""You are a helpful and informative bot that answers questions using text from the reference passage included below. 
+Even if the passage does not contain specific information to answer the question, you should generate a relevant response based on your knowledge.
+Be sure to respond in a complete sentence, being comprehensive and including all relevant background information. 
+However, keep in mind that you are answering a technician, an engineer, or a student who seeks help from you. 
+Provide technical answers structured like this: 
+Step 1: ..... 
+Step 2: .... 
+and so on. 
+Additionally, specify whether the error is: 
+1. Critical 
+2. Non-Critical 
+3. Warning 
+
+QUESTION: '{query}' 
+PASSAGE: '{escaped_passage}' 
 
 ANSWER:
 """
@@ -55,22 +67,28 @@ ANSWER:
 
 # Generate an answer using the Gemini Pro API
 def generate_answer(prompt: str):
-    gemini_api_key = "AIzaSyCx21Io2B9RKfC0SsFd7cURD9Uxl4CDaOw"  # Ensure this is set in your environment
-    if not gemini_api_key:
-        raise ValueError("Gemini API Key not provided.")
-    genai.configure(api_key=gemini_api_key)
+    genai.configure(api_key=GEMINI_API_KEY)
     model = genai.GenerativeModel('gemini-pro')
     result = model.generate_content(prompt)
     return result.text
 
+# Function to refine the query using Gemini
+def refine_query(initial_query: str):
+    prompt = f"Please clean up the following query by removing any timestamps and unnecessary information: '{initial_query}'"
+    return generate_answer(prompt)
+
 # Chatbot function to get results for the user's query
 def chatbot(query):
-    print(f"Searching for: {query}")
+    print(f"Original Query: {query}")
     
-    # Step 1: Perform a search based on the query
-    links = perform_search(query)
+    # Step 1: Refine the query
+    refined_query = refine_query(query)
+    print(f"Refined Query: {refined_query}")
     
-    # Step 2: Scrape and summarize each webpage
+    # Step 2: Perform a search based on the refined query
+    links = perform_search(refined_query)
+    
+    # Step 3: Scrape and summarize each webpage
     summaries = []
     for link in links[:3]:  # Limit to the top 3 links
         print(f"Scraping link: {link}")
@@ -81,25 +99,29 @@ def chatbot(query):
     relevant_passage = " ".join(summaries)
 
     # Create the RAG prompt
-    rag_prompt = make_rag_prompt(query, relevant_passage)
+    rag_prompt = make_rag_prompt(refined_query, relevant_passage)
     
     # Generate an answer using the Gemini API
     answer = generate_answer(rag_prompt)
     return answer
 
-# Function to take multi-line input from the user
+# Function to accept multi-line queries from the user
 def get_multiline_input():
-    print("Enter your query (type 'END' to finish):")
+    print("Please enter your query (press Enter twice to finish):")
     lines = []
     while True:
         line = input()
-        if line.strip().upper() == "END":  # Check for the end keyword
+        if line == "":
             break
         lines.append(line)
-    return " ".join(lines)
+    return "\n".join(lines)
 
-# Example chatbot interaction
+# Main function to take a query from the user and process it
 if __name__ == "__main__":
+    # Take multi-line input query from the user
     user_query = get_multiline_input()
-    output = chatbot(user_query)
-    print(output)
+    
+    if user_query:  # Ensure the query is not empty
+        output = chatbot(user_query)
+        print(output)
+        print("\n\n")
