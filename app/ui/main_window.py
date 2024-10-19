@@ -14,6 +14,7 @@ from .widgets.menubar import MenuBar
 from .widgets.toolbar import ToolBar
 from .widgets.accordion import *
 from ..utils.config import config
+from ..logs import showlog
 
 
 class MainWindow(QMainWindow):
@@ -172,6 +173,7 @@ class MainWindow(QMainWindow):
         treeview.setFixedWidth(250)  # Set fixed width to 250 pixels
         treeview.setMinimumHeight(600)  # Ensure minimum height
         treeview.setColumnWidth(0, 250)
+        treeview.clicked.connect(self.openlog)
         return treeview
 
     def open_folder(self) -> None:
